@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "../../../../../common_src/scss/master";
+@import "../../../../common_src/scss/master";
 @import "./base";
 @import "global-nav";
 
@@ -8,8 +8,12 @@
   padding-top: 70px;
   width: 90%;
   margin: 60px auto;
-  @media screen and (max-width: 768px) {
-    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 30px;
+    margin: 30px auto 0;
   }
 }
 
@@ -23,7 +27,7 @@
   text-align: center;
   margin-bottom: 20px;
   .section-title {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 5px;
     text-align: center;
     position: relative;
@@ -33,10 +37,9 @@
       content: "◇";
       position: absolute;
       top: 50%;
-      font-size: 2rem;
-      font-weight: 100;
-      color: $main-color;
       transform: translateY(-50%);
+      color: $main-color;
+      font-size: 2rem;
     }
     &::before {
       left: -23%;
@@ -44,11 +47,16 @@
     &::after {
       right: -23%;
     }
-    @media screen and (max-width: 768px) {
-      font-size: 3rem;
-    }
   } //section-title
 } //title-parent
+
+@media screen and (max-width: 768px) {
+  .section-title-parent {
+    .section-title {
+      font-size: 3.5rem;
+    }
+  }
+}
 
 .btn-wrapper {
   text-align: center;
@@ -83,9 +91,6 @@
     letter-spacing: 4px;
     margin: 70px 0 0;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: 4rem;
-    }
   }
   img {
     display: block;
@@ -94,40 +99,58 @@
     background-position: center;
     width: 70vw;
     height: 40vh;
-    margin: 50px auto 80px;
+    margin: 50px auto 0;
+  }
+}
 
-    @media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
+  .header {
+    .header-title {
+      font-size: 3rem;
+      margin: 30px 0 0;
+    }
+    img {
       height: 28vh;
       width: 90vw;
+      margin: 30px auto 0;
     }
   }
 }
 
 .about-section {
   .intro {
-    margin: 10px auto 0;
+    margin: 30px auto 0;
     width: 80%;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: 768px) {
-      width: 90%;
-      flex-direction: column;
-    }
     .intro-text {
       margin: 10px 30px;
       width: 40%;
-      font-size: 1.6rem;
+      font-size: 2rem;
       letter-spacing: 1px;
       line-height: 1.5;
       text-indent: .8rem;
       @media screen and (max-width: 768px) {
-        width: 95%;
-        margin: 30px auto 0;
-        line-height: 1.6;
       }
     }
   } //intro
 } //top
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    .intro {
+      margin: 0 auto;
+      width: 90%;
+      flex-direction: column;
+      .intro-text {
+        width: 95%;
+        margin: 30px auto 0;
+        font-size: 1.7rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
 
 .article-section {
   width: 80%;
@@ -143,10 +166,10 @@
 
 .topic {
   position: relative;
-  padding: 30px 10px 70px;
-  width: 28%;
-  margin: 20px 8px;
-  border:1px solid #eee;
+  padding: 50px 10px 90px;
+  width: 25%;
+  margin: 20px 15px;
+  border:1px solid #bbb;
   @media screen and (max-width: 768px) {
     width: 85%;
     margin: 10px auto;
@@ -257,34 +280,22 @@
 }
 
 .footer {
-  padding: 30px 0 25px;
+  padding: 50px 10vw;
   background: #b03131;
 
   .footer-title {
-    margin-left: 80px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 100;
     letter-spacing: 4px;
-    @media screen and (max-width: 768px) {
-      font-size: 2.2rem;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
   }
 
   .footer-wrapper {
     margin-top: 15px;
-    margin-left: 80px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: left;
     text-align: left;
-    @media screen and (max-width: 768px) {
-      flex-wrap: wrap;
-      margin: 0 auto;
-      flex-direction: row;
-      width: 80%;
-    }
     .footer-section {
       margin-right: 50px;
       padding: 8px 30px 20px 0;
@@ -295,7 +306,7 @@
       }
       .section-title {
         color: #fff;
-        font-size: 1.9rem;
+        font-size: 2.4rem;
         letter-spacing: 3px;
         text-align: left;
         font-weight: 100;
@@ -307,9 +318,10 @@
       .footer-list {
         list-style: none;
         .list-item {
-          font-size: 1.4rem;
+          font-size: 1.7rem;
           line-height: 1.7;
           letter-spacing: 2px;
+          margin-left: 10px;
           @media screen and (max-width: 768px) {
             font-size: 1.2rem;
           }
@@ -332,9 +344,16 @@
     } //footer-section
   } //footer-wrapper
 
+  .temp {
+    border: 1px solid red;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   .copyright {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;
     @media screen and (max-width: 768px) {
@@ -342,7 +361,24 @@
     }
     a {
       color: #fff;
-      font-size: 1.4rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px 1vw;
+    .footer-title {
+      font-size: 2.2rem;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+    .footer-wrapper {
+      margin: 0 auto;
+      width: 90%;
+      flex-direction: row;
+      border: 1px solid red;
     }
   }
 }

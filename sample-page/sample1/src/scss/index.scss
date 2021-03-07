@@ -1,8 +1,34 @@
 @charset "UTF-8";
 
 @import "../../../../common_src/scss/master";
-@import "./base";
-@import "global-nav";
+@import "./global-nav";
+
+html {
+  font-size: 62.5%;
+  font-family: 'Amiri', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  color: #333;
+  transition: .3s;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.title {
+  color: #444;
+  font-family: 'Amiri', serif;
+  font-weight: 100;
+}
 
 .section {
   padding-top: 70px;
@@ -17,15 +43,10 @@
   }
 }
 
-.title {
-  color: #444;
-  font-family: 'Amiri', serif;
-  font-weight: 100;
-}
-
 .section-title-parent {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  width: 90%;
   .section-title {
     font-size: 5rem;
     letter-spacing: 5px;
@@ -117,6 +138,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .main {
+    padding-bottom: 50px;
+  }
+}
+
 .about-section {
   .intro {
     margin: 30px auto 0;
@@ -159,9 +186,6 @@
 .article-flex {
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 }
 
 .topic {
@@ -170,17 +194,10 @@
   width: 25%;
   margin: 20px 15px;
   border:1px solid #bbb;
-  @media screen and (max-width: 768px) {
-    width: 85%;
-    margin: 10px auto;
-  }
   .topic-title {
     color: #666;
     font-size: 2.8rem;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: 2.2rem;
-    }
   }
   .topic-icon {
     font-size: 5rem;
@@ -188,10 +205,6 @@
     color: #888;
     margin: 35px 0;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: 4rem;
-      margin: 15px 0;
-    }
   }
   .topic-text {
     color: #666;
@@ -200,9 +213,6 @@
     letter-spacing: 1px;
     width: 85%;
     margin: 0 auto;
-    @media screen and (max-width: 768px) {
-      margin: 20px auto 0;
-    }
   }
   .topic-btn {
     display: inline-block;
@@ -213,6 +223,30 @@
     letter-spacing: 1px;
     padding: 8px 12px;
     background: #ccc;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .article-section {
+    width: 90%;
+    .article-flex {
+      flex-direction: column;
+      .topic {
+        width: 75%;
+        margin: 10px auto;
+        padding: 30px 10px 70px;
+        .topic-title {
+          font-size: 2.2rem;
+        }
+        .topic-icon {
+          font-size: 4rem;
+          margin: 15px 0;
+        }
+        .topic-text {
+          margin: 20px auto 0;
+        }
+      }
+    }
   }
 }
 
@@ -299,11 +333,6 @@
     .footer-section {
       margin-right: 50px;
       padding: 8px 30px 20px 0;
-      @media screen and (max-width: 768px) {
-        margin: 0 3px;
-        padding: 0;
-        width: 43%;
-      }
       .section-title {
         color: #fff;
         font-size: 2.4rem;
@@ -311,9 +340,6 @@
         text-align: left;
         font-weight: 100;
         margin: 0 0 10px 0;
-        @media screen and (max-width: 768px) {
-          letter-spacing: 1px;
-        }
       }
       .footer-list {
         list-style: none;
@@ -339,30 +365,16 @@
               text-decoration: underline;
             }
           }
-        }
-      }
+        } //list-item
+      } //footer-list
     } //footer-section
   } //footer-wrapper
-
-  .temp {
-    border: 1px solid red;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
 
   .copyright {
     color: #fff;
     font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      margin-top: 20px;
-    }
-    a {
-      color: #fff;
-      font-size: 2rem;
-    }
   }
 }
 
@@ -377,8 +389,27 @@
     .footer-wrapper {
       margin: 0 auto;
       width: 90%;
-      flex-direction: row;
-      border: 1px solid red;
+      flex-wrap: wrap;
+
+      .footer-section {
+        margin: 0 3px;
+        padding: 0;
+        width: 43%;
+        margin-bottom: 20px;
+        .section-title {
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+          margin: 0 0 5px 0;
+        }
+      }
     }
-  }
+    .copyright {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      a {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+    }
+  }// footer
 }

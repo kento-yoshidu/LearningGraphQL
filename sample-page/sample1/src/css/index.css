@@ -98,27 +98,6 @@ input, select {
   vertical-align: middle;
 }
 
-html {
-  font-size: 62.5%;
-  font-family: "Amiri", serif;
-}
-
-ul {
-  list-style: none;
-}
-
-.flex {
-  display: flex;
-}
-
-a {
-  color: #333;
-  transition: 0.3s;
-}
-a:hover {
-  color: #dc143c;
-}
-
 .global-nav {
   height: 70px;
   background-color: #fff;
@@ -241,6 +220,33 @@ a:hover {
     bottom: 5px;
   }
 }
+html {
+  font-size: 62.5%;
+  font-family: "Amiri", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  color: #333;
+  transition: 0.3s;
+}
+a:hover {
+  color: #dc143c;
+}
+
+.title {
+  color: #444;
+  font-family: "Amiri", serif;
+  font-weight: 100;
+}
+
 .section {
   padding-top: 70px;
   width: 90%;
@@ -253,15 +259,10 @@ a:hover {
     margin: 30px auto 0;
   }
 }
-.title {
-  color: #444;
-  font-family: "Amiri", serif;
-  font-weight: 100;
-}
-
 .section-title-parent {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  width: 90%;
 }
 .section-title-parent .section-title {
   font-size: 5rem;
@@ -346,6 +347,11 @@ a:hover {
     margin: 30px auto 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .main {
+    padding-bottom: 50px;
+  }
+}
 .about-section .intro {
   margin: 30px auto 0;
   width: 80%;
@@ -381,11 +387,6 @@ a:hover {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 768px) {
-  .article-flex {
-    flex-direction: column;
-  }
-}
 
 .topic {
   position: relative;
@@ -394,21 +395,10 @@ a:hover {
   margin: 20px 15px;
   border: 1px solid #bbb;
 }
-@media screen and (max-width: 768px) {
-  .topic {
-    width: 85%;
-    margin: 10px auto;
-  }
-}
 .topic .topic-title {
   color: #666;
   font-size: 2.8rem;
   text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .topic .topic-title {
-    font-size: 2.2rem;
-  }
 }
 .topic .topic-icon {
   font-size: 5rem;
@@ -417,12 +407,6 @@ a:hover {
   margin: 35px 0;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
-  .topic .topic-icon {
-    font-size: 4rem;
-    margin: 15px 0;
-  }
-}
 .topic .topic-text {
   color: #666;
   font-size: 1.6rem;
@@ -430,11 +414,6 @@ a:hover {
   letter-spacing: 1px;
   width: 85%;
   margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .topic .topic-text {
-    margin: 20px auto 0;
-  }
 }
 .topic .topic-btn {
   display: inline-block;
@@ -447,6 +426,29 @@ a:hover {
   background: #ccc;
 }
 
+@media screen and (max-width: 768px) {
+  .article-section {
+    width: 90%;
+  }
+  .article-section .article-flex {
+    flex-direction: column;
+  }
+  .article-section .article-flex .topic {
+    width: 75%;
+    margin: 10px auto;
+    padding: 30px 10px 70px;
+  }
+  .article-section .article-flex .topic .topic-title {
+    font-size: 2.2rem;
+  }
+  .article-section .article-flex .topic .topic-icon {
+    font-size: 4rem;
+    margin: 15px 0;
+  }
+  .article-section .article-flex .topic .topic-text {
+    margin: 20px auto 0;
+  }
+}
 .link-section {
   display: flex;
   flex-direction: column;
@@ -543,13 +545,6 @@ a:hover {
   margin-right: 50px;
   padding: 8px 30px 20px 0;
 }
-@media screen and (max-width: 768px) {
-  .footer .footer-wrapper .footer-section {
-    margin: 0 3px;
-    padding: 0;
-    width: 43%;
-  }
-}
 .footer .footer-wrapper .footer-section .section-title {
   color: #fff;
   font-size: 2.4rem;
@@ -557,11 +552,6 @@ a:hover {
   text-align: left;
   font-weight: 100;
   margin: 0 0 10px 0;
-}
-@media screen and (max-width: 768px) {
-  .footer .footer-wrapper .footer-section .section-title {
-    letter-spacing: 1px;
-  }
 }
 .footer .footer-wrapper .footer-section .footer-list {
   list-style: none;
@@ -591,26 +581,11 @@ a:hover {
 .footer .footer-wrapper .footer-section .footer-list .list-item a:hover {
   text-decoration: underline;
 }
-.footer .temp {
-  border: 1px solid red;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
-}
 .footer .copyright {
   color: #fff;
   font-size: 2rem;
   letter-spacing: 1px;
   text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .footer .copyright {
-    margin-top: 20px;
-  }
-}
-.footer .copyright a {
-  color: #fff;
-  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -625,7 +600,25 @@ a:hover {
   .footer .footer-wrapper {
     margin: 0 auto;
     width: 90%;
-    flex-direction: row;
-    border: 1px solid red;
+    flex-wrap: wrap;
+  }
+  .footer .footer-wrapper .footer-section {
+    margin: 0 3px;
+    padding: 0;
+    width: 43%;
+    margin-bottom: 20px;
+  }
+  .footer .footer-wrapper .footer-section .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+  }
+  .footer .copyright {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .footer .copyright a {
+    color: #fff;
+    font-size: 1.5rem;
   }
 }

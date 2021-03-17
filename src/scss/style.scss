@@ -13,6 +13,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.nav {
+  position: fixed;
+  right: 3vw;
+  top: 50vh;
+  transform: translateY(-50%);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin: 1.2vh 0;
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: #666;
+      }
+    }
+  }
+}
 .header {
   background: $main-color;
   height: 95vh;
@@ -352,7 +372,6 @@ html {
 }
 
 .sec3 {
-  border: 1px solid red;
 
   .section-wrapper {
 

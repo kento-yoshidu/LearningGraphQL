@@ -19,7 +19,34 @@
   <title>toriwatari Portfolio Site</title>
 </head>
 <body>
-  <header class="header">
+
+  <nav class="nav">
+    <ul>
+      <li>
+        <a href="#header">〇</a>
+      </li>
+      <li>
+        <a href="#goal">〇</a>
+      </li>
+      <li>
+        <a href="#sec1">〇</a>
+      </li>
+      <li>
+        <a href="#sec2">〇</a>
+      </li>
+      <li>
+        <a href="#sec3">〇</a>
+      </li>
+      <li>
+        <a href="#sec4">〇</a>
+      </li>
+      <li>
+        <a href="#sec5">〇</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="header" id="header">
     <h2 class="header-sub-title">toriwatari</h2>
     <h1 class="header-title">Portfolio Web Site</h1>
     <p>更新日 : <time>2021-02-12</time></p>
@@ -52,7 +79,7 @@
     </a>
   </header> 
 
-  <section class="section goal-section">
+  <section class="section goal-section sa sa--up" id="goal">
     <h2 class="section-title">2021年の目標</h2>
     <p>通年目標：TypeScriptをマスターする</p>
     <section class="sub-section">
@@ -69,21 +96,21 @@
     <p class="goal">TypeScript + MongoDB + GraphQLでアプリを作る</p>
   </section>
 
-  <section class="section section-links" id="sec1">
+  <section class="section section-links sa sa--up" id="sec2">
     <h2 class="section-title links-title">Sample Pages</h2> 
 
     <div class="links-wrapper">
-      <a class="link-item sa sa--up" href="sample-page/sample1/" target="_blank">
+      <a class="link-item" href="sample-page/sample1/" target="_blank">
         <h3 class="title link-title">Sample1</h3>
         <i class="fas fa-code"></i>
         <p>サンプルページ1</p>
       </a>
-      <a class="link-item sa sa--up" href="sample-page/sample2/" target="_blank">
+      <a class="link-item" href="sample-page/sample2/" target="_blank">
         <h3 class="title link-title">Sample2</h3>
         <div class="nogi"></div>
         <p>サンプルページ2です。〇木坂46をテーマにページを作成中です。</p>
       </a>
-      <a class="link-item sa sa--up" href="sample-page/sample3/" target="_blank">
+      <a class="link-item" href="sample-page/sample3/" target="_blank">
         <h3 class="title link-title">Sample3</h3>
         <i class="fas fa-code"></i>
         <p>サンプルページ3</p>
@@ -94,7 +121,7 @@
     </div>
   </section>
 
-  <section class="section sec3">
+  <section class="section sec3 sa sa--up" id="sec3">
     <h2 class="section-title">CSS Animation & Tips</h2>
 
     <div class="section-wrapper">
@@ -106,8 +133,8 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2 class="section-title">ブログ</h2>
+  <section class="section sa sa--up" id="sec4">
+    <h2 class="section-title">Blog</h2>
 
     <div class="section-wrapper">
       <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
@@ -120,8 +147,7 @@
     </div>
   </section>
 
-
-  <section class="section section-constitution">
+  <section class="section section-constitution" id="sec5">
     <h2 class="section-title">本サイトの構成</h2>
     <img src="constitution/images/main.jpg" class="img">
     <div class="btn-wrapper">
@@ -129,6 +155,6 @@
     </div>
   </section>
 
-  <script src="/src/js/fadein.js"></script>
+  <script src="./src/js/fadein.js"></script>
 </body>
 </html>

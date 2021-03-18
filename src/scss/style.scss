@@ -33,6 +33,13 @@ html {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
 .header {
   background: $main-color;
   height: 95vh;
@@ -103,7 +110,6 @@ html {
     color: #ddd;
     text-decoration: none;
 
-    &:hover .my-skill-title,
     &:hover .skill-wrapper div p {
       color: orange;
     }
@@ -209,7 +215,10 @@ html {
 
 .section-title {
   color: #444;
+  /*
   font-family: 'Open Sans', sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  */
   font-weight: 100;
   font-size: 3.8rem;
   letter-spacing: 2px;

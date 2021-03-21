@@ -496,13 +496,16 @@ html {
 }
 
 .sec5 {
-    .svg-image {
-      height: 240px;
-      background-size: 60%;
-      background-position: top center;
-      background-repeat: no-repeat;
-    }
+  /*
+  .svg-image {
+    height: 240px;
+    background-size: 60%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  */
 
+  /*
     .image-01 {
       background-image: url(../svg/section4-01.svg);
     }
@@ -512,6 +515,7 @@ html {
     .image-03 {
       background-image: url(../svg/section4-03.svg);
     }
+    */
 
   .wrapper {
     display: flex;

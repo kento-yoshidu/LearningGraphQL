@@ -255,6 +255,15 @@ html {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .btn-wrapper {
+    a {
+      font-size: 1.3rem;
+      padding: 10px 22px;
+    }
+  }
+}
+
 .contents-section {
   padding-top: 50px;
   .section-title {
@@ -270,7 +279,7 @@ html {
     justify-content: center;
     align-items: flex-start;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 
     .introduction {
       position: relative;
@@ -283,7 +292,7 @@ html {
       }
       .contents-title {
         font-size: 3rem;
-        color: #444;
+        color: #666;
       }
       .text {
         color: #444;
@@ -295,7 +304,7 @@ html {
       width: 50%;
       .svg-image {
         width: 100%;
-        min-height: 50vh;
+        min-height: 35vh;
         background-size: 60%;
         background-position: top center;
         background-repeat: no-repeat;
@@ -380,9 +389,8 @@ html {
     .contents-01 {
       .section-wrapper {
         .introduction {
-          border: 1px solid red;
           width: 80%;;
-
+          border: none;
           &::before,
           &::after {
             display: none;
@@ -390,9 +398,11 @@ html {
         }
       }
     }
+    .contents-02 {
+      background: lighten(#b3d4fc, 10%);
+    }
   }
 }
-
 
 .sec3 {
   background-color: $top-main-color1;
@@ -406,57 +416,86 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 
     .introduction {
       margin: 0 auto;
-      width: 70%;
+      width: 80%;
       max-width: 1500px;
       background-image: linear-gradient(to right, rgba(255,255,255,.7), rgba(255, 255, 255, .1));
-
       .inner {
         padding: 5% 10% 5% 5%;
-
         .section-title {
           color: $top-sub-color2;
           font-size: 3rem;
           margin-bottom: 20px;
         }
         p {
-          margin-bottom: 10px;
-          font-size: 2rem;
           width: 100%;
-        color: #444;
+          margin-bottom: 10px;
+          color: #444;
+          font-size: 2rem;
+            font-weight: 900;
         }
       }
     }
+    .btn-wrapper {
+      margin-top: 30px;
+      margin-bottom: 0;
+      a {
+        background-image: -webkit-linear-gradient(to right, $top-sub-color2, $top-main-color1);
+        background-image: linear-gradient(to right, $top-sub-color1, $top-sub-color2, $top-sub-color1); 
 
-  .btn-wrapper {
-    margin-top: 30px;
-    margin-bottom: 0;
-    a {
-      background-image: -webkit-linear-gradient(to right, $top-sub-color2, $top-main-color1);
-      background-image: linear-gradient(to right, $top-sub-color1, $top-sub-color2, $top-sub-color1); 
-
-      &:hover {
-        background-position: left center;
-        transform: scale(1.05);
+        &:hover {
+          background-position: left center;
+          transform: scale(1.05);
+        }
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  .sec3 {
+    .section-wrapper {
+      max-width: none;
+      .introduction {
+        width: 90%;
+        .inner {
+          .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
   }
 }
 
 .sec4 {
   position: relative;
-
-  .box-wrapper {
-    display: flex;
+  #js-sec4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 0;
+    width: 100%;
   }
-  .box {
-    width: 30%;
+  .board {
+    height: 80%;
+    width: 80%;
+    border: 1px solid red;
+  }
+}
+
+.sec5 {
     .svg-image {
       height: 240px;
       background-size: 60%;
@@ -473,19 +512,6 @@ html {
     .image-03 {
       background-image: url(../svg/section4-03.svg);
     }
-  }
-
-  #js-sec4 {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    z-index: 0;
-    width: 100%;
-    height: 1100px;
-    border: 1px solid red;
-  }
 
   .wrapper {
     display: flex;
@@ -553,4 +579,34 @@ html {
     background: linear-gradient(to top, $top-sub-color2, $top-sub-color1);
     box-shadow: 0 0 5px $top-sub-color1;
   }
+}
+
+@media screen and (max-width:768px) {
+  .sec5 {
+    .wrapper {
+      .paid-member,
+      .free-member {
+        width: 70%;
+        padding: 1rem;
+        margin: 0 auto 20px;
+        .icon {
+          height: 70px;
+        }
+        .title {
+          font-size: 1.5rem;
+        }
+        .fee {
+          font-size: 1.8rem;
+          span {
+            font-size: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background: #444;;
+  height: 50vh;;
 }

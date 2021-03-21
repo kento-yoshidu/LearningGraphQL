@@ -237,6 +237,12 @@ html {
   transform: scale(1.05);
 }
 
+@media screen and (max-width: 768px) {
+  .btn-wrapper a {
+    font-size: 1.3rem;
+    padding: 10px 22px;
+  }
+}
 .contents-section {
   padding-top: 50px;
 }
@@ -252,7 +258,7 @@ html {
   justify-content: center;
   align-items: flex-start;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 .contents-section .section-wrapper .introduction {
   position: relative;
@@ -266,7 +272,7 @@ html {
 }
 .contents-section .section-wrapper .introduction .contents-title {
   font-size: 3rem;
-  color: #444;
+  color: #666;
 }
 .contents-section .section-wrapper .introduction .text {
   color: #444;
@@ -277,7 +283,7 @@ html {
 }
 .contents-section .section-wrapper .section-image .svg-image {
   width: 100%;
-  min-height: 50vh;
+  min-height: 35vh;
   background-size: 60%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -339,11 +345,14 @@ html {
 }
 @media screen and (max-width: 768px) {
   .contents-section .contents-01 .section-wrapper .introduction {
-    border: 1px solid red;
     width: 80%;
+    border: none;
   }
   .contents-section .contents-01 .section-wrapper .introduction::before, .contents-section .contents-01 .section-wrapper .introduction::after {
     display: none;
+  }
+  .contents-section .contents-02 {
+    background: #e4f0fe;
   }
 }
 .sec3 {
@@ -358,13 +367,12 @@ html {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
   max-width: 1500px;
   margin: 0 auto;
 }
 .sec3 .section-wrapper .introduction {
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
   max-width: 1500px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 }
@@ -377,10 +385,11 @@ html {
   margin-bottom: 20px;
 }
 .sec3 .section-wrapper .introduction .inner p {
-  margin-bottom: 10px;
-  font-size: 2rem;
   width: 100%;
+  margin-bottom: 10px;
   color: #444;
+  font-size: 2rem;
+  font-weight: 900;
 }
 .sec3 .section-wrapper .btn-wrapper {
   margin-top: 30px;
@@ -394,31 +403,26 @@ html {
   transform: scale(1.05);
 }
 
+@media screen and (max-width: 768px) {
+  .sec3 .section-wrapper {
+    max-width: none;
+  }
+  .sec3 .section-wrapper .introduction {
+    width: 90%;
+  }
+  .sec3 .section-wrapper .introduction .inner .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .sec3 .section-wrapper .introduction .inner p {
+    font-size: 1.6rem;
+  }
+}
 .sec4 {
   position: relative;
 }
-.sec4 .box-wrapper {
-  display: flex;
-}
-.sec4 .box {
-  width: 30%;
-}
-.sec4 .box .svg-image {
-  height: 240px;
-  background-size: 60%;
-  background-position: top center;
-  background-repeat: no-repeat;
-}
-.sec4 .box .image-01 {
-  background-image: url(../svg/section4-01.svg);
-}
-.sec4 .box .image-02 {
-  background-image: url(../svg/section4-02.svg);
-}
-.sec4 .box .image-03 {
-  background-image: url(../svg/section4-03.svg);
-}
 .sec4 #js-sec4 {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -426,10 +430,29 @@ html {
   display: block;
   z-index: 0;
   width: 100%;
-  height: 1100px;
+}
+.sec4 .board {
+  height: 80%;
+  width: 80%;
   border: 1px solid red;
 }
-.sec4 .wrapper {
+
+.sec5 .svg-image {
+  height: 240px;
+  background-size: 60%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.sec5 .image-01 {
+  background-image: url(../svg/section4-01.svg);
+}
+.sec5 .image-02 {
+  background-image: url(../svg/section4-02.svg);
+}
+.sec5 .image-03 {
+  background-image: url(../svg/section4-03.svg);
+}
+.sec5 .wrapper {
   display: flex;
   justify-content: center;
   width: 90%;
@@ -437,20 +460,20 @@ html {
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-  .sec4 .wrapper {
+  .sec5 .wrapper {
     flex-direction: column;
   }
 }
-.sec4 .paid-member,
-.sec4 .free-member {
+.sec5 .paid-member,
+.sec5 .free-member {
   width: 25%;
   padding: 2rem 3rem;
   z-index: 1;
   color: #fff;
   text-align: center;
 }
-.sec4 .paid-member .icon,
-.sec4 .free-member .icon {
+.sec5 .paid-member .icon,
+.sec5 .free-member .icon {
   height: 100px;
   width: 100%;
   background-image: url(../svg/section4-free.svg);
@@ -458,28 +481,28 @@ html {
   background-position: center;
   background-size: 20%;
 }
-.sec4 .paid-member .title,
-.sec4 .free-member .title {
+.sec5 .paid-member .title,
+.sec5 .free-member .title {
   font-size: 2rem;
   font-weight: 400;
 }
-.sec4 .paid-member .fee,
-.sec4 .free-member .fee {
+.sec5 .paid-member .fee,
+.sec5 .free-member .fee {
   font-size: 2.4rem;
   margin: 20px 0;
 }
-.sec4 .paid-member .fee span,
-.sec4 .free-member .fee span {
+.sec5 .paid-member .fee span,
+.sec5 .free-member .fee span {
   display: inline-block;
   font-size: 7rem;
   margin: 0 10px;
 }
-.sec4 .paid-member P,
-.sec4 .free-member P {
+.sec5 .paid-member P,
+.sec5 .free-member P {
   font-size: 2rem;
 }
-.sec4 .paid-member .btn,
-.sec4 .free-member .btn {
+.sec5 .paid-member .btn,
+.sec5 .free-member .btn {
   display: inline-block;
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
@@ -489,17 +512,46 @@ html {
   font-weight: 100;
   background: #fff;
 }
-.sec4 .introduction {
+.sec5 .introduction {
   width: 36%;
   background: #fff;
   z-index: 1;
 }
-.sec4 .paid-member {
+.sec5 .paid-member {
   background: linear-gradient(-10deg, #514AfD, #24C6DC);
   box-shadow: 0 0 5px #24C6DC;
   margin: 0 3%;
 }
-.sec4 .free-member {
+.sec5 .free-member {
   background: linear-gradient(to top, #e7550e, #dea502);
   box-shadow: 0 0 5px #dea502;
+}
+
+@media screen and (max-width: 768px) {
+  .sec5 .wrapper .paid-member,
+.sec5 .wrapper .free-member {
+    width: 70%;
+    padding: 1rem;
+    margin: 0 auto 20px;
+  }
+  .sec5 .wrapper .paid-member .icon,
+.sec5 .wrapper .free-member .icon {
+    height: 70px;
+  }
+  .sec5 .wrapper .paid-member .title,
+.sec5 .wrapper .free-member .title {
+    font-size: 1.5rem;
+  }
+  .sec5 .wrapper .paid-member .fee,
+.sec5 .wrapper .free-member .fee {
+    font-size: 1.8rem;
+  }
+  .sec5 .wrapper .paid-member .fee span,
+.sec5 .wrapper .free-member .fee span {
+    font-size: 5rem;
+  }
+}
+.footer {
+  background: #444;
+  height: 50vh;
 }

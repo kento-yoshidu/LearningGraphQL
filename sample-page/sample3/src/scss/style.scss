@@ -8,6 +8,8 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  font-family: 'Amiri', serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .header {
@@ -166,70 +168,6 @@ html {
   }
 }
 
-
-/*
-.section {
-  .section-wrapper {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;;
-    }
-
-    .introduction,
-    .section-image {
-      max-width: 600px;
-    }
-
-    .introduction {
-      width: 50%;
-
-      .inner {
-        position: relative;
-
-        .numbering {
-          margin-bottom: 20px;
-          font-size: 3rem;
-          font-weight: 900;
-          background: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
-          background: linear-gradient(to right, $top-main-color2, $top-main-color1);
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        .section-title {
-          margin-bottom: 30px;
-          font-size: 3.3rem;
-          color: #666;
-        }
-
-        p {
-          width: 80%;
-          color: #666;
-          font-size: 1.8rem;
-          line-height: 1.6;
-        }
-      } //inner
-    } //introduction
-
-    .section-image {
-      padding-top: 100px;
-      width: 50%;
-      min-height: 60vh;
-      .svg-image {
-        width: 100%;
-        height: 100%;
-        background-size: 60%;
-        background-position: top center;
-        background-repeat: no-repeat;
-      }
-    }
-  }
-}
-*/
-
 .btn-wrapper {
   text-align: center;
   padding-bottom: 30px;
@@ -258,8 +196,8 @@ html {
 @media screen and (max-width: 768px) {
   .btn-wrapper {
     a {
-      font-size: 1.3rem;
-      padding: 10px 22px;
+      font-size: 1.5rem;
+      padding: 13px 25px;
     }
   }
 }
@@ -286,17 +224,24 @@ html {
       padding: 30px 50px;
       width: 50%;
       .numbering {
-        font-size: 2.5rem;
+        display: inline-block;
+        font-size: 2.3rem;
         font-weight: 900;
-        color: $top-main-color1;
+        background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
+        -webkit-background-clip: text;//テキストでくり抜く
+        -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
       }
       .contents-title {
-        font-size: 3rem;
+        margin-bottom: 10px;
+        font-size: 3.5rem;
         color: #666;
       }
       .text {
+        margin-bottom: 10px;
         color: #444;
         font-size: 1.8rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
       }
     }
 
@@ -366,6 +311,7 @@ html {
       font-size: 3rem;
     }
     .section-wrapper {
+      padding: 10px 0 0;
       .introduction {
         width: 80%;
         padding: 10px 15px;
@@ -373,7 +319,8 @@ html {
           font-size: 2rem;
         }
         .contents-title {
-          font-size: 2.3rem;
+          font-size: 2.8rem;
+          margin-bottom: 10px;
         }
       }
 
@@ -427,9 +374,13 @@ html {
       .inner {
         padding: 5% 10% 5% 5%;
         .section-title {
+          display: inline-block;
           color: $top-sub-color2;
           font-size: 3rem;
           margin-bottom: 20px;
+          background: -webkit-linear-gradient(0deg, $top-sub-color2, $top-sub-color1);//背景色にグラデーションを指定
+          -webkit-background-clip: text;//テキストでくり抜く
+          -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
         }
         p {
           width: 100%;
@@ -446,7 +397,6 @@ html {
       a {
         background-image: -webkit-linear-gradient(to right, $top-sub-color2, $top-main-color1);
         background-image: linear-gradient(to right, $top-sub-color1, $top-sub-color2, $top-sub-color1); 
-
         &:hover {
           background-position: left center;
           transform: scale(1.05);
@@ -461,7 +411,7 @@ html {
     .section-wrapper {
       max-width: none;
       .introduction {
-        width: 90%;
+        width: 85%;
         .inner {
           .section-title {
             font-size: 2.5rem;
@@ -469,6 +419,7 @@ html {
           }
           p {
             font-size: 1.6rem;
+            line-height: 1.5;
           }
         }
       }
@@ -478,6 +429,7 @@ html {
 
 .sec4 {
   position: relative;
+  padding: 30px 0;
   #js-sec4 {
     position: absolute;
     top: 0;
@@ -488,9 +440,14 @@ html {
     z-index: 0;
     width: 100%;
   }
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+  }
   .board {
     height: 80%;
     width: 80%;
+    margin: 0 auto;
     border: 1px solid red;
   }
 }

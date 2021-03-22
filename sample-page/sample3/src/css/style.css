@@ -10,6 +10,8 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  font-family: "Amiri", serif;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .header {
@@ -152,68 +154,6 @@ html {
     width: 60%;
   }
 }
-/*
-.section {
-  .section-wrapper {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;;
-    }
-
-    .introduction,
-    .section-image {
-      max-width: 600px;
-    }
-
-    .introduction {
-      width: 50%;
-
-      .inner {
-        position: relative;
-
-        .numbering {
-          margin-bottom: 20px;
-          font-size: 3rem;
-          font-weight: 900;
-          background: -webkit-linear-gradient(to right, $top-main-color2, $top-main-color1);
-          background: linear-gradient(to right, $top-main-color2, $top-main-color1);
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        .section-title {
-          margin-bottom: 30px;
-          font-size: 3.3rem;
-          color: #666;
-        }
-
-        p {
-          width: 80%;
-          color: #666;
-          font-size: 1.8rem;
-          line-height: 1.6;
-        }
-      } //inner
-    } //introduction
-
-    .section-image {
-      padding-top: 100px;
-      width: 50%;
-      min-height: 60vh;
-      .svg-image {
-        width: 100%;
-        height: 100%;
-        background-size: 60%;
-        background-position: top center;
-        background-repeat: no-repeat;
-      }
-    }
-  }
-}
-*/
 .btn-wrapper {
   text-align: center;
   padding-bottom: 30px;
@@ -239,8 +179,8 @@ html {
 
 @media screen and (max-width: 768px) {
   .btn-wrapper a {
-    font-size: 1.3rem;
-    padding: 10px 22px;
+    font-size: 1.5rem;
+    padding: 13px 25px;
   }
 }
 .contents-section {
@@ -266,17 +206,24 @@ html {
   width: 50%;
 }
 .contents-section .section-wrapper .introduction .numbering {
-  font-size: 2.5rem;
+  display: inline-block;
+  font-size: 2.3rem;
   font-weight: 900;
-  color: #514AfD;
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .contents-section .section-wrapper .introduction .contents-title {
-  font-size: 3rem;
+  margin-bottom: 10px;
+  font-size: 3.5rem;
   color: #666;
 }
 .contents-section .section-wrapper .introduction .text {
+  margin-bottom: 10px;
   color: #444;
   font-size: 1.8rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 .contents-section .section-wrapper .section-image {
   width: 50%;
@@ -329,6 +276,9 @@ html {
   .contents-section .section-title {
     font-size: 3rem;
   }
+  .contents-section .section-wrapper {
+    padding: 10px 0 0;
+  }
   .contents-section .section-wrapper .introduction {
     width: 80%;
     padding: 10px 15px;
@@ -337,7 +287,8 @@ html {
     font-size: 2rem;
   }
   .contents-section .section-wrapper .introduction .contents-title {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
   }
   .contents-section .section-wrapper .section-image {
     display: none;
@@ -380,9 +331,13 @@ html {
   padding: 5% 10% 5% 5%;
 }
 .sec3 .section-wrapper .introduction .inner .section-title {
+  display: inline-block;
   color: #e7550e;
   font-size: 3rem;
   margin-bottom: 20px;
+  background: -webkit-linear-gradient(0deg, #e7550e, #dea502);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .sec3 .section-wrapper .introduction .inner p {
   width: 100%;
@@ -408,7 +363,7 @@ html {
     max-width: none;
   }
   .sec3 .section-wrapper .introduction {
-    width: 90%;
+    width: 85%;
   }
   .sec3 .section-wrapper .introduction .inner .section-title {
     font-size: 2.5rem;
@@ -416,10 +371,12 @@ html {
   }
   .sec3 .section-wrapper .introduction .inner p {
     font-size: 1.6rem;
+    line-height: 1.5;
   }
 }
 .sec4 {
   position: relative;
+  padding: 30px 0;
 }
 .sec4 #js-sec4 {
   position: absolute;
@@ -431,9 +388,14 @@ html {
   z-index: 0;
   width: 100%;
 }
+.sec4 .section-title {
+  font-size: 3rem;
+  text-align: center;
+}
 .sec4 .board {
   height: 80%;
   width: 80%;
+  margin: 0 auto;
   border: 1px solid red;
 }
 

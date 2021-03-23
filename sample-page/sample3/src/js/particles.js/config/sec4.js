@@ -11,7 +11,7 @@ const per = async () => {
           "value": 50,
           "density": {
             "enable": true,
-            "value_area": width
+            "value_area": 300
           }
         },
         "color":{

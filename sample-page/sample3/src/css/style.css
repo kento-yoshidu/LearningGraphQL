@@ -1,17 +1,115 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /**
 * トップページ用
 **/
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   font-family: "Amiri", serif;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+p {
+  line-height: 1.5;
 }
 
 .header {
@@ -183,14 +281,18 @@ html {
     padding: 13px 25px;
   }
 }
+.section-title {
+  color: #444;
+}
+
 .contents-section {
   padding-top: 50px;
 }
 .contents-section .section-title {
-  color: #888;
   font-size: 5rem;
   letter-spacing: 3px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .contents-section .section-wrapper {
   padding: 50px 0 0;
@@ -206,15 +308,16 @@ html {
   width: 50%;
 }
 .contents-section .section-wrapper .introduction .numbering {
+  margin-bottom: 10px;
   display: inline-block;
   font-size: 2.3rem;
   font-weight: 900;
-  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  background: -webkit-linear-gradient(90deg, #ACB6E5, #86FDE8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .contents-section .section-wrapper .introduction .contents-title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 3.5rem;
   color: #666;
 }
@@ -223,7 +326,6 @@ html {
   color: #444;
   font-size: 1.8rem;
   letter-spacing: 1px;
-  line-height: 1.5;
 }
 .contents-section .section-wrapper .section-image {
   width: 50%;
@@ -324,7 +426,7 @@ html {
 .sec3 .section-wrapper .introduction {
   margin: 0 auto;
   width: 80%;
-  max-width: 1500px;
+  max-width: 1200px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 }
 .sec3 .section-wrapper .introduction .inner {
@@ -398,16 +500,16 @@ html {
   background: #fff;
   box-shadow: 0 0 5px 5px #ddd;
   border-radius: 3px;
-  padding: 3%;
+  padding: 3% 3% 2%;
   width: 35%;
 }
 .sec4 .board .index {
   position: absolute;
-  height: 50px;
-  top: -25px;
+  height: 40px;
+  top: -20px;
   left: -50px;
-  padding: 7px 30px 0;
-  font-size: 3rem;
+  padding: 12px 25px 0;
+  font-size: 2.8rem;
   background-color: #fff;
   font-weight: 900;
   box-shadow: 0 0 5px 5px #ddd;
@@ -418,19 +520,26 @@ html {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
 .sec4 .board .icon {
   display: block;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  margin: 25px auto;
 }
-.sec4 .board .text {
+.sec4 .board .text,
+.sec4 .board .client {
   color: #666;
   font-size: 1.8rem;
   font-weight: 900;
+  line-height: 1.5;
   width: 80%;
   margin: 0 auto 10px;
+}
+.sec4 .board .client {
+  margin-top: 25px;
+  color: #444;
+  text-align: right;
 }
 .sec4 .board-1 {
   margin-top: 100px;
@@ -438,6 +547,9 @@ html {
 }
 .sec4 .board-1 .index {
   color: #24C6DC;
+}
+.sec4 .board-1 .client {
+  background: linear-gradient(transparent 65%, rgba(36, 198, 220, 0.7) 0);
 }
 .sec4 .board-2 {
   width: 50%;
@@ -447,6 +559,9 @@ html {
 .sec4 .board-2 .index {
   color: #514AfD;
 }
+.sec4 .board-2 .client {
+  background: linear-gradient(transparent 65%, rgba(36, 198, 220, 0.7) 0);
+}
 .sec4 .board-3 {
   margin-top: 100px;
   margin-left: 30%;
@@ -454,7 +569,47 @@ html {
 .sec4 .board-3 .index {
   color: #dea502;
 }
+.sec4 .board-3 .client {
+  background: linear-gradient(transparent 65%, rgba(36, 198, 220, 0.7) 0);
+}
 
+@media screen and (max-width: 768px) {
+  .sec4 {
+    padding: 50px 0;
+  }
+  .sec4 .section-title {
+    font-size: 3rem;
+    width: 80%;
+    margin: 0 auto 30px;
+  }
+  .sec4 .board {
+    width: 70%;
+    margin: 0 auto 50px;
+    padding: 12% 3% 6%;
+  }
+  .sec4 .board:last-of-type {
+    margin: 0 auto 20px;
+  }
+  .sec4 .board .index {
+    height: 30px;
+    top: -15px;
+    left: -40px;
+    font-size: 2rem;
+  }
+  .sec4 .board .title {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 2rem;
+  }
+  .sec4 .board .icon {
+    margin: 10px auto;
+  }
+  .sec4 .board .text,
+.sec4 .board .client {
+    width: 85%;
+    font-size: 1.5rem;
+  }
+}
 .sec5 {
   position: relative;
 }

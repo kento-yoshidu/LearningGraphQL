@@ -1,15 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 // 変数
 @import "./import/variables";
+@import "../../../../common_src/scss/master";
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   font-family: 'Amiri', serif;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+p {
+  line-height: 1.5;
 }
 
 .header {
@@ -202,13 +203,16 @@ html {
   }
 }
 
+.section-title {
+  color: #444;
+}
 .contents-section {
   padding-top: 50px;
   .section-title {
-    color: #888;
     font-size: 5rem;
     letter-spacing: 3px;
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .section-wrapper {
@@ -224,15 +228,16 @@ html {
       padding: 30px 50px;
       width: 50%;
       .numbering {
+        margin-bottom: 10px;
         display: inline-block;
         font-size: 2.3rem;
         font-weight: 900;
-        background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
+        background: -webkit-linear-gradient(90deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
         -webkit-background-clip: text;//テキストでくり抜く
         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
       }
       .contents-title {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: 3.5rem;
         color: #666;
       }
@@ -241,7 +246,6 @@ html {
         color: #444;
         font-size: 1.8rem;
         letter-spacing: 1px;
-        line-height: 1.5;
       }
     }
 
@@ -369,7 +373,7 @@ html {
     .introduction {
       margin: 0 auto;
       width: 80%;
-      max-width: 1500px;
+      max-width: 1200px;
       background-image: linear-gradient(to right, rgba(255,255,255,.7), rgba(255, 255, 255, .1));
       .inner {
         padding: 5% 10% 5% 5%;
@@ -450,16 +454,16 @@ html {
     background: #fff;
     box-shadow: 0 0 5px 5px #ddd;
     border-radius: 3px;
-    padding: 3%;
+    padding: 3% 3% 2%;
     width: 35%;
 
     .index {
       position: absolute;
-      height: 50px;
-      top: -25px;
+      height: 40px;
+      top: -20px;
       left: -50px;
-      padding: 7px 30px 0;
-      font-size: 3rem;
+      padding: 12px 25px 0;
+      font-size: 2.8rem;
       background-color: #fff;
       font-weight: 900;
       box-shadow: 0 0 5px 5px #ddd;
@@ -470,19 +474,26 @@ html {
       font-size: 2.8rem;
       text-align: center;
       margin-bottom: 15px;
+      line-height: 1.5;
     }
     .icon {
       display: block;
       text-align: center;
-      margin: 0 auto;
-      margin-bottom: 15px;
+      margin: 25px auto;
     }
-    .text {
+    .text,
+    .client {
       color: #666;
       font-size: 1.8rem;
       font-weight: 900;
+      line-height: 1.5;
       width: 80%;
       margin: 0 auto 10px;
+    }
+    .client {
+      margin-top: 25px;
+      color: #444;
+      text-align: right;
     }
   }
 
@@ -492,6 +503,9 @@ html {
     .index {
       color: $top-main-color2;
     }
+    .client {
+      background: linear-gradient(transparent 65%, rgba($top-main-color2, .7) 0);
+    }
   }
   .board-2 {
     width: 50%;
@@ -500,12 +514,56 @@ html {
     .index {
       color: $top-main-color1;
     }
+    .client {
+      background: linear-gradient(transparent 65%, rgba($top-main-color2, .7) 0);
+    }
   }
   .board-3 {
     margin-top: 100px;
     margin-left: 30%;
     .index {
       color: $top-sub-color1;
+    }
+    .client {
+      background: linear-gradient(transparent 65%, rgba($top-main-color2, .7) 0);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec4 {
+    padding: 50px 0;
+    .section-title {
+      font-size: 3rem;
+      width: 80%;
+      margin: 0 auto 30px;
+    }
+    .board {
+      width: 70%;
+      margin: 0 auto 50px;
+      padding: 12% 3% 6%;
+      &:last-of-type {
+        margin: 0 auto 20px;
+      }
+      .index {
+        height: 30px;
+        top: -15px;
+        left: -40px;
+        font-size: 2rem;
+      }
+      .title {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 2rem;
+      }
+      .icon {
+        margin: 10px auto;
+      }
+      .text,
+      .client {
+        width: 85%;
+        font-size: 1.5rem;
+      }
     }
   }
 }

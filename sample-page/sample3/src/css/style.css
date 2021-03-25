@@ -282,17 +282,15 @@ p {
   }
 }
 .section-title {
+  margin-bottom: 30px;
   color: #444;
+  font-size: 4.5rem;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .contents-section {
   padding-top: 50px;
-}
-.contents-section .section-title {
-  font-size: 5rem;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-bottom: 30px;
 }
 .contents-section .section-wrapper {
   padding: 50px 0 0;
@@ -338,6 +336,10 @@ p {
   background-repeat: no-repeat;
 }
 
+.contents-section .contents-01,
+.contents-section .contents-02 {
+  padding: 30px 0 40px;
+}
 .contents-section .contents-01 .section-wrapper .introduction {
   background: #fff;
   border: 1px solid #eee;
@@ -490,11 +492,6 @@ p {
   z-index: -1;
   width: 100%;
 }
-.sec4 .section-title {
-  font-size: 4rem;
-  text-align: center;
-  letter-spacing: 3px;
-}
 .sec4 .board {
   position: relative;
   background: #fff;
@@ -543,7 +540,7 @@ p {
 }
 .sec4 .board-1 {
   margin-top: 100px;
-  margin-left: 43%;
+  margin-left: 41%;
 }
 .sec4 .board-1 .index {
   color: #24C6DC;
@@ -560,7 +557,7 @@ p {
   color: #514AfD;
 }
 .sec4 .board-2 .client {
-  background: linear-gradient(transparent 65%, rgba(36, 198, 220, 0.7) 0);
+  background: linear-gradient(transparent 65%, rgba(81, 74, 253, 0.7) 0);
 }
 .sec4 .board-3 {
   margin-top: 100px;
@@ -570,7 +567,7 @@ p {
   color: #dea502;
 }
 .sec4 .board-3 .client {
-  background: linear-gradient(transparent 65%, rgba(36, 198, 220, 0.7) 0);
+  background: linear-gradient(transparent 65%, rgba(222, 165, 2, 0.7) 0);
 }
 
 @media screen and (max-width: 768px) {
@@ -611,13 +608,16 @@ p {
   }
 }
 .sec5 {
-  position: relative;
+  padding: 50px 0;
+}
+.sec5 .section-title {
+  margin-bottom: 80px;
 }
 .sec5 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
@@ -627,15 +627,15 @@ p {
 }
 .sec5 .paid-member,
 .sec5 .free-member {
-  width: 25%;
-  padding: 2rem 3rem;
-  z-index: 1;
+  position: relative;
+  width: 30%;
+  padding: 2rem 2rem 100px;
   color: #fff;
   text-align: center;
 }
 .sec5 .paid-member .icon,
 .sec5 .free-member .icon {
-  height: 100px;
+  height: 80px;
   width: 100%;
   background-image: url(../svg/section4-free.svg);
   background-repeat: no-repeat;
@@ -649,50 +649,95 @@ p {
 }
 .sec5 .paid-member .fee,
 .sec5 .free-member .fee {
-  font-size: 2.4rem;
-  margin: 20px 0;
+  font-size: 1.8rem;
+  margin: 10px 0;
 }
 .sec5 .paid-member .fee span,
 .sec5 .free-member .fee span {
   display: inline-block;
-  font-size: 7rem;
+  font-size: 4rem;
   margin: 0 10px;
 }
 .sec5 .paid-member P,
 .sec5 .free-member P {
   font-size: 2rem;
 }
+.sec5 .paid-member .plan-specific,
+.sec5 .free-member .plan-specific {
+  margin: 20px 0;
+}
+.sec5 .paid-member .plan-specific .list,
+.sec5 .free-member .plan-specific .list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+.sec5 .paid-member .plan-specific .list dl,
+.sec5 .paid-member .plan-specific .list dt,
+.sec5 .free-member .plan-specific .list dl,
+.sec5 .free-member .plan-specific .list dt {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 .sec5 .paid-member .btn,
 .sec5 .free-member .btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-block;
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
-  color: #514AfD;
-  font-size: 1.6rem;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 900;
   background: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
 }
 .sec5 .introduction {
-  width: 36%;
+  padding: 0 3rem 2rem;
+  width: 41%;
   background: #fff;
-  z-index: 1;
 }
-.sec5 .paid-member {
-  background: linear-gradient(-10deg, #514AfD, #24C6DC);
-  box-shadow: 0 0 5px #24C6DC;
-  margin: 0 3%;
+.sec5 .introduction .title {
+  font-size: 4.5rem;
+  margin-bottom: 15px;
+}
+.sec5 .introduction p {
+  color: #444;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.sec5 .introduction p .span1 {
+  color: #dea502;
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+.sec5 .introduction p .span2 {
+  color: #24C6DC;
+  font-size: 2.8rem;
+  font-weight: 900;
 }
 .sec5 .free-member {
   background: linear-gradient(to top, #e7550e, #dea502);
-  box-shadow: 0 0 5px #dea502;
+  box-shadow: 0 0 8px 2px #dea502;
+}
+.sec5 .free-member .btn {
+  color: #dea502;
+}
+.sec5 .paid-member {
+  background: linear-gradient(-10deg, #514AfD, #24C6DC);
+  box-shadow: 0 0 8px 2px #24C6DC;
+  margin: 0 3%;
 }
 
 @media screen and (max-width: 768px) {
   .sec5 .wrapper .paid-member,
 .sec5 .wrapper .free-member {
-    width: 70%;
-    padding: 1rem;
+    width: 80%;
+    padding: 1rem 2rem 100px;
     margin: 0 auto 20px;
   }
   .sec5 .wrapper .paid-member .icon,

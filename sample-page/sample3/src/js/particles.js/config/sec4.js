@@ -113,7 +113,8 @@ const per = async () => {
           }
         }
       },
-      "retina_detect":true
+      "retina_detect":true,
+      "resize": false
     });
     var count_particles,
         stats,

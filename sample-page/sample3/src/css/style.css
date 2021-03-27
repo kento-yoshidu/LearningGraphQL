@@ -782,17 +782,36 @@ p {
   }
 }
 .footer {
-  padding: 50px 6vw;
+  display: flex;
+  margin-top: 50px;
+  padding: 50px 8vw;
+  background: #444;
   color: #fff;
-  background: #445;
+  font-size: 1.6rem;
 }
-.footer .footer-title {
+.footer .info .footer-title {
   margin-bottom: 20px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
-.footer .wrapper {
-  display: flex;
-  border: 1px solid #bbb;
-  font-size: 1.8rem;
+.footer .info address .company,
+.footer .info address .address {
+  margin-bottom: 5px;
+}
+.footer .info address .company a,
+.footer .info address .address a {
+  color: #fff;
+}
+.footer .info address .company a:hover,
+.footer .info address .address a:hover {
+  color: #dea502;
+}
+.footer .list-block {
+  margin-left: 5vw;
+}
+.footer .list-block .list-column a {
+  color: #fff;
+}
+.footer .list-block .list-column a:hover {
+  color: #dea502;
 }

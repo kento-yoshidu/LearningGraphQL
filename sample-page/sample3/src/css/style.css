@@ -254,7 +254,6 @@ p {
 }
 .btn-wrapper {
   text-align: center;
-  padding-bottom: 30px;
 }
 .btn-wrapper a {
   display: inline-block;
@@ -289,6 +288,12 @@ p {
   letter-spacing: 3px;
 }
 
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+    margin: 0;
+  }
+}
 .contents-section {
   padding-top: 50px;
 }
@@ -378,29 +383,36 @@ p {
 
 @media screen and (max-width: 768px) {
   .contents-section .section-title {
-    font-size: 3rem;
+    margin: 0;
   }
   .contents-section .section-wrapper {
     padding: 10px 0 0;
   }
   .contents-section .section-wrapper .introduction {
-    width: 80%;
     padding: 10px 15px;
   }
   .contents-section .section-wrapper .introduction .numbering {
     font-size: 2rem;
+    margin-bottom: 5px;
   }
   .contents-section .section-wrapper .introduction .contents-title {
     font-size: 2.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .contents-section .section-wrapper .section-image {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .contents-section .contents-01 .section-wrapper .introduction {
+  .contents-section .contents-01,
+.contents-section .contents-02 {
+    padding-top: 10px 0 20px;
+  }
+  .contents-section .contents-01 .introduction,
+.contents-section .contents-02 .introduction {
     width: 80%;
+  }
+  .contents-section .contents-01 .section-wrapper .introduction {
     border: none;
   }
   .contents-section .contents-01 .section-wrapper .introduction::before, .contents-section .contents-01 .section-wrapper .introduction::after {
@@ -437,7 +449,6 @@ p {
 .sec3 .section-wrapper .introduction .inner .section-title {
   display: inline-block;
   color: #e7550e;
-  font-size: 3rem;
   margin-bottom: 20px;
   background: -webkit-linear-gradient(0deg, #e7550e, #dea502);
   -webkit-background-clip: text;
@@ -575,12 +586,11 @@ p {
     padding: 50px 0;
   }
   .sec4 .section-title {
-    font-size: 3rem;
     width: 80%;
     margin: 0 auto 30px;
   }
   .sec4 .board {
-    width: 70%;
+    width: 68%;
     margin: 0 auto 50px;
     padding: 12% 3% 6%;
   }
@@ -590,7 +600,7 @@ p {
   .sec4 .board .index {
     height: 30px;
     top: -15px;
-    left: -40px;
+    left: -30px;
     font-size: 2rem;
   }
   .sec4 .board .title {
@@ -619,11 +629,6 @@ p {
   width: 90%;
   max-width: 1300px;
   margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .sec5 .wrapper {
-    flex-direction: column;
-  }
 }
 .sec5 .paid-member,
 .sec5 .free-member {
@@ -734,10 +739,20 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .sec5 {
+    padding: 0;
+  }
+  .sec5 .section-title {
+    margin-bottom: 40px;
+  }
+  .sec5 .wrapper {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
   .sec5 .wrapper .paid-member,
 .sec5 .wrapper .free-member {
     width: 80%;
-    padding: 1rem 2rem 100px;
+    padding: 1rem 2rem 80px;
     margin: 0 auto 20px;
   }
   .sec5 .wrapper .paid-member .icon,
@@ -756,8 +771,28 @@ p {
 .sec5 .wrapper .free-member .fee span {
     font-size: 5rem;
   }
+  .sec5 .wrapper .introduction {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  .sec5 .wrapper .introduction .title {
+    font-size: 3rem;
+    font-weight: 900;
+  }
 }
 .footer {
-  background: #444;
-  height: 50vh;
+  padding: 50px 6vw;
+  color: #fff;
+  background: #445;
+}
+.footer .footer-title {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.footer .wrapper {
+  display: flex;
+  border: 1px solid #bbb;
+  font-size: 1.8rem;
 }

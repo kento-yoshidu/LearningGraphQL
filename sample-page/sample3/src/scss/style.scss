@@ -393,6 +393,7 @@ p {
         .section-title {
           display: inline-block;
           color: $sub-color2;
+          font-size: 3rem;
           margin-bottom: 20px;
           background: -webkit-linear-gradient(0deg, $sub-color2, $sub-color1);//背景色にグラデーションを指定
           -webkit-background-clip: text;//テキストでくり抜く
@@ -628,6 +629,7 @@ p {
         dt {
           font-size: 1.3rem;
           font-weight: 500;
+          text-align: left;
           letter-spacing: 1px;
         }
 
@@ -690,6 +692,7 @@ p {
 @media screen and (max-width:768px) {
   .sec5 {
     padding: 0;
+    margin: 0;
     .section-title {
       margin-bottom: 40px;
     }
@@ -755,11 +758,50 @@ p {
   }
   .list-block {
     margin-left: 5vw;
+    display: flex;
     .list-column {
+      margin: 0 20px;
       a {
+        display: block;
+        margin-bottom: 20px;
         color: #fff;
+        text-decoration: none;
         &:hover {
           color: $sub-color1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 40px 7vw 30px;
+    margin-top: 0;
+    .info {
+      margin-bottom: 20px;
+      .footer-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      address {
+        .company,
+        .address {
+          font-size: 1.2rem;
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .list-block {
+      margin: 0;
+      .list-column {
+        margin: 0 14px 0 0;
+        a {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
         }
       }
     }

@@ -449,6 +449,7 @@ p {
 .sec3 .section-wrapper .introduction .inner .section-title {
   display: inline-block;
   color: #e7550e;
+  font-size: 3rem;
   margin-bottom: 20px;
   background: -webkit-linear-gradient(0deg, #e7550e, #dea502);
   -webkit-background-clip: text;
@@ -684,6 +685,7 @@ p {
 .sec5 .free-member .plan-specific .list dt {
   font-size: 1.3rem;
   font-weight: 500;
+  text-align: left;
   letter-spacing: 1px;
 }
 .sec5 .paid-member .btn,
@@ -741,6 +743,7 @@ p {
 @media screen and (max-width: 768px) {
   .sec5 {
     padding: 0;
+    margin: 0;
   }
   .sec5 .section-title {
     margin-bottom: 40px;
@@ -808,10 +811,50 @@ p {
 }
 .footer .list-block {
   margin-left: 5vw;
+  display: flex;
+}
+.footer .list-block .list-column {
+  margin: 0 20px;
 }
 .footer .list-block .list-column a {
+  display: block;
+  margin-bottom: 20px;
   color: #fff;
+  text-decoration: none;
 }
 .footer .list-block .list-column a:hover {
   color: #dea502;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 40px 7vw 30px;
+    margin-top: 0;
+  }
+  .footer .info {
+    margin-bottom: 20px;
+  }
+  .footer .info .footer-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .footer .info address .company,
+.footer .info address .address {
+    font-size: 1.2rem;
+  }
+  .footer .info address .company a,
+.footer .info address .address a {
+    font-size: 1.2rem;
+  }
+  .footer .list-block {
+    margin: 0;
+  }
+  .footer .list-block .list-column {
+    margin: 0 14px 0 0;
+  }
+  .footer .list-block .list-column a {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
 }

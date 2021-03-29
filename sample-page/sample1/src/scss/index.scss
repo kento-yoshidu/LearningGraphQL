@@ -115,11 +115,12 @@ a {
   }
   img {
     display: block;
-    background: url(../images/top.jpg) ;
-    background-size: cover;
-    background-position: center;
-    width: 70vw;
-    height: 40vh;
+    //background: url(../images/top.webp) ;
+    //background-size: cover;
+    //background-position: center;
+    max-width: 1080px;
+    width: 50%;
+    height: auto;
     margin: 50px auto 0;
   }
 }

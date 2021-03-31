@@ -12,11 +12,10 @@ gtag('config', 'UA-177277170-1');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" href="./src/css/index.css">
-<link rel="stylesheet" href="./src/fontawesome/css/all.min.css" type="text/css">
+<link rel="preload" href="./src/css/index.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="./src/fontawesome/css/all.min.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet"><!-- title用フォント -->
 <title>Sample1</title>
-<script src="src/js/nav.js"></script>
 </head>
 <body>
   <nav class="global-nav" id="js-global-nav">
@@ -164,6 +163,7 @@ gtag('config', 'UA-177277170-1');
     <p class="copyright">Copyright © 2020 <a href="https://potsunen.info">toriwatari</a></p>
   </footer>
 
+  <script src="src/js/nav.js"></script>
   <script>
   //nav固定
   setCloneNav();

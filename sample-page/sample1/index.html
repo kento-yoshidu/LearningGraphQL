@@ -12,7 +12,7 @@ gtag('config', 'UA-177277170-1');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<link rel="preload" href="./src/css/index.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="./src/css/index.css" type="text/css">
 <link rel="preload" href="./src/fontawesome/css/all.min.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Amiri" as="font" onload="this.onload=null;this.rel='stylesheet'"><!-- title用フォント -->
 <title>Sample1</title>
@@ -31,9 +31,24 @@ gtag('config', 'UA-177277170-1');
   <header class="header">
     <h1 class="title header-title">Sample1</h1>
     <picture>
-      <source type="image/webp" srcset="./src/images/top.webp">
-      <img src="src/images/top.png">
+      <source
+        type="image/webp"
+        srcset="./src/images/top.webp"
+        media="(min-width: 768px)"
+      >
+      <source
+        type="image/webp"
+        srcset="./src/images/top_mobi.webp"
+        media="(min-width: 300px)"
+      >
+      <img
+        src="src/images/top.png"
+        width="1080"
+        height="619"
+        alt="トップ画像"
+      >
     </picture>
+    <!--https://code-kitchen.dev/html/picture/-->
   </header>
 
   <main class="main" role="main">

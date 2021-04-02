@@ -116,9 +116,6 @@ a {
   }
   img {
     display: block;
-    //background: url(../images/top.webp) ;
-    //background-size: cover;
-    //background-position: center;
     max-width: 1080px;
     width: 50%;
     height: auto;
@@ -158,8 +155,6 @@ a {
       letter-spacing: 1px;
       line-height: 1.5;
       text-indent: .8rem;
-      @media screen and (max-width: 768px) {
-      }
     }
   } //intro
 } //top
@@ -182,7 +177,7 @@ a {
 
 .article-section {
   width: 80%;
-} //section-article
+}
 
 .article-flex {
   display: flex;

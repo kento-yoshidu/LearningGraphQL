@@ -193,7 +193,6 @@ a {
   .topic-title {
     color: #666;
     font-size: 2.8rem;
-    text-align: center;
   }
   .topic-icon {
     font-size: 5rem;
@@ -249,64 +248,30 @@ a {
 .link-section {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-  & > .section-title-parent {
+  .section-title-parent {
     margin-bottom: 60px;
-    @media screen and (max-width: 768px) {
-      margin-bottom: 30px;
-    }
   }
   .link-wrapper {
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto 40px;
-    @media screen and (max-width: 768px) {
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link-section {
+    width: 100%;
+    .section-title-parent {
+      margin-bottom: 30px;
+    }
+    .link-wrapper {
       flex-wrap: wrap;
       justify-content: center;
       margin: 0 auto;
-      width: 98%;
+      width: 88%;
     }
-    a {
-      display: block;
-      position: relative;
-      @media screen and (max-width: 768px) {
-        margin: 0 5px 5px 5px;
-      }
-      .img {
-        width: 180px;
-        height: 111px;
-        object-fit: cover;
-        @media screen and (max-width: 768px) {
-          width: 150px;
-          height: 92px;
-        }
-      }
-      .mask {
-        color: #fff;
-        text-align: center;
-        position: absolute; 
-        top: 0;
-        background: rgba(0,0,0,.8);
-        font-size: 2.7rem;
-        letter-spacing: 2px;
-        opacity: 0;
-        width: 180px;
-        height: 111px;
-        line-height: 111px;
-        transition: all .3s ease;
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
-      }
-      &:hover .mask {
-        opacity: 1;
-        transform: rotate(360deg);
-      }
-    }
-  }
+  } 
 }
 
 .footer {

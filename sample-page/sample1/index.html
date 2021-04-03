@@ -33,7 +33,7 @@ gtag('config', 'UA-177277170-1');
     <picture>
       <source
         type="image/webp"
-        srcset="./src/images/top.webp"
+        srcset="./src/images/pc/top.webp"
         media="(min-width: 768px)"
       >
       <source
@@ -42,7 +42,7 @@ gtag('config', 'UA-177277170-1');
         media="(min-width: 300px)"
       >
       <img
-        src="src/images/top.png"
+        src="src/images/pc/top.png"
         width="1080"
         height="619"
         alt="トップ画像"
@@ -96,12 +96,46 @@ gtag('config', 'UA-177277170-1');
       </div>
       <div class="link-wrapper">
         <a href="https://github.com/kento-yoshidu" class="link-item" target="_blank">
-          <img class="img" src="src/images/gh.jpg">
-          <p class="mask">GitHub</p>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./src/images/pc/image01.webp"
+              media="(min-width: 768px)"
+            >
+            <source
+              type="image/webp"
+              srcset="./src/images/top_mobi.webp"
+              media="(min-width: 300px)"
+            >
+            <img
+              src="src/images/top.png"
+              width="200"
+              height="133"
+              alt="トップ画像"
+            >
+          </picture>
+          <p class="mask">Dummy</p>
         </a>
         <a href="#" class="link-item">
-          <img class="img" src="src/images/test.jpg">
-          <p class="mask">Dummy</p>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./src/images/pc/image02.webp"
+              media="(min-width: 768px)"
+            >
+            <source
+              type="image/webp"
+              srcset="./src/images/pc/image02.webp"
+              media="(min-width: 300px)"
+            >
+            <img
+              src="./src/images/pc/image02.jpg"
+              width="200"
+              height="133"
+              alt="トップ画像"
+            >
+          </picture>
+          
         </a>
         <a href="#" class="link-item">
           <img class="img" src="src/images/test2.jpg">

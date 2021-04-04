@@ -1,0 +1,40 @@
+@import "./reset";
+
+html {
+  font: 62.5%
+        "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro",
+          "Yu Gothic Medium", "游ゴシック Medium",
+          YuGothic, "游ゴシック体",
+          "メイリオ",
+          sans-serif;
+}
+
+.header {
+  margin-top: 150px;
+  padding-left: 5vw;
+  .header-title {
+    margin-bottom: 40px;
+    font: {
+      size: 3rem;
+      weight: 100;
+    }
+  }
+  p {
+    width: 80%;
+    margin-bottom: 10px;
+    font: {
+      size: 1.8rem;
+    }
+    line-height: 1.5;
+  }
+}
+
+.sec2 {
+  margin: 50px 0;
+  background-image: url(../../../sample1/src/images/pc/top.jpg);
+  background-size: cover;
+  height: 70vh;
+  .section-title {
+    background-color: blue;
+  }
+}

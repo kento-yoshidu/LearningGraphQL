@@ -332,10 +332,16 @@ a {
   } //footer-wrapper
 
   .copyright {
-    color: #fff;
     font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;
+    a {
+      color: inherit;
+      font-size: 2rem;
+    }
+    a:hover {
+      color: #fff;
+    }
   }
 }
 

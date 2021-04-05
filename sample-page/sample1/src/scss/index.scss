@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-@import "../../../../common_src/scss/master";
+@import "./reset";
+
 @import "./global-nav";
+@import "./variables";
 
 html {
   font-size: 62.5%;

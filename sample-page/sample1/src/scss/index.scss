@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import "./reset";
-
 @import "./global-nav";
 @import "./variables";
 
@@ -28,7 +27,6 @@ a {
 
 .title {
   color: #444;
-  font-family: 'Amiri', serif;
   font-weight: 100;
 }
 
@@ -195,6 +193,7 @@ a {
   .topic-title {
     color: #666;
     font-size: 2.8rem;
+    text-align: center;
   }
   .topic-icon {
     font-size: 5rem;
@@ -334,6 +333,7 @@ a {
   } //footer-wrapper
 
   .copyright {
+    color: #fff;
     font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;

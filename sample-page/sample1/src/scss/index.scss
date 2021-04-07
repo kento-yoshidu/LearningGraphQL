@@ -246,13 +246,13 @@ a {
   }
 }
 
-.link-section {
+.photo-section {
   display: flex;
   flex-direction: column;
   .section-title-parent {
     margin-bottom: 60px;
   }
-  .link-wrapper {
+  .photo-wrapper {
     width: 90%;
     display: flex;
     justify-content: space-around;
@@ -265,12 +265,12 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .link-section {
+  .photo-section {
     width: 100%;
     .section-title-parent {
       margin-bottom: 30px;
     }
-    .link-wrapper {
+    .photo-wrapper {
       flex-wrap: wrap;
       margin: 0 auto;
       width: 93%;

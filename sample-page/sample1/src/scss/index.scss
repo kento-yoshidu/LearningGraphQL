@@ -255,8 +255,12 @@ a {
   .link-wrapper {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto 40px;
+    source {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -268,9 +272,8 @@ a {
     }
     .link-wrapper {
       flex-wrap: wrap;
-      justify-content: center;
       margin: 0 auto;
-      width: 88%;
+      width: 93%;
     }
   } 
 }

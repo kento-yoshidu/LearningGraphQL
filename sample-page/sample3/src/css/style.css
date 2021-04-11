@@ -104,7 +104,6 @@ input, select {
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  font-family: "Amiri", serif;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
@@ -236,20 +235,21 @@ p {
     border: 80px solid rgba(160, 180, 240, 0.1);
   }
   .header .text-wrapper .header-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 80%;
     font-size: 2rem;
     margin: 0 auto 3vh;
     letter-spacing: 1px;
   }
   .header .text-wrapper .product-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    line-height: 1.2;
     letter-spacing: 2px;
   }
   .header .text-wrapper .text {
     font-size: 2.2rem;
     margin-bottom: 10px;
-    width: 60%;
+    width: 65%;
   }
 }
 .btn-wrapper {
@@ -619,7 +619,7 @@ p {
   }
 }
 .sec5 {
-  padding: 50px 0;
+  padding: 50px 0 90px;
 }
 .sec5 .section-title {
   margin-bottom: 80px;
@@ -785,75 +785,84 @@ p {
   }
 }
 .footer {
-  display: flex;
-  margin-top: 50px;
   padding: 50px 8vw;
   background: #444;
   color: #fff;
   font-size: 1.6rem;
 }
-.footer .info .footer-title {
+.footer .wrapper {
+  display: flex;
+  margin-bottom: 30px;
+}
+.footer .wrapper .info .footer-title {
   margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: 400;
 }
-.footer .info address .company,
-.footer .info address .address {
+.footer .wrapper .info address .company,
+.footer .wrapper .info address .address {
   margin-bottom: 5px;
 }
-.footer .info address .company a,
-.footer .info address .address a {
+.footer .wrapper .info address .company a,
+.footer .wrapper .info address .address a {
   color: #fff;
 }
-.footer .info address .company a:hover,
-.footer .info address .address a:hover {
+.footer .wrapper .info address .company a:hover,
+.footer .wrapper .info address .address a:hover {
   color: #dea502;
 }
-.footer .list-block {
+.footer .wrapper .list-block {
   margin-left: 5vw;
   display: flex;
 }
-.footer .list-block .list-column {
+.footer .wrapper .list-block .list-column {
   margin: 0 20px;
 }
-.footer .list-block .list-column a {
+.footer .wrapper .list-block .list-column a {
   display: block;
   margin-bottom: 20px;
   color: #fff;
   text-decoration: none;
 }
-.footer .list-block .list-column a:hover {
+.footer .wrapper .list-block .list-column a:hover {
   color: #dea502;
+}
+.footer .refer {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    flex-direction: column;
     padding: 40px 7vw 30px;
     margin-top: 0;
   }
-  .footer .info {
+  .footer .wrapper {
+    flex-direction: column;
+  }
+  .footer .wrapper .info {
     margin-bottom: 20px;
   }
-  .footer .info .footer-title {
+  .footer .wrapper .info .footer-title {
     font-size: 2rem;
     margin-bottom: 10px;
   }
-  .footer .info address .company,
-.footer .info address .address {
+  .footer .wrapper .info address .company,
+.footer .wrapper .info address .address {
     font-size: 1.2rem;
   }
-  .footer .info address .company a,
-.footer .info address .address a {
+  .footer .wrapper .info address .company a,
+.footer .wrapper .info address .address a {
     font-size: 1.2rem;
   }
-  .footer .list-block {
+  .footer .wrapper .list-block {
     margin: 0;
   }
-  .footer .list-block .list-column {
+  .footer .wrapper .list-block .list-column {
     margin: 0 14px 0 0;
   }
-  .footer .list-block .list-column a {
+  .footer .wrapper .list-block .list-column a {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }

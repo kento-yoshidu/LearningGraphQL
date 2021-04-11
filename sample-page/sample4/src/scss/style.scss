@@ -30,11 +30,33 @@ html {
 }
 
 .sec2 {
+  position: relative;
   margin: 50px 0;
-  background-image: url(../../../sample1/src/images/pc/top.jpg);
-  background-size: cover;
-  height: 70vh;
-  .section-title {
-    background-color: blue;
+  .img {
+    background-image: url(../images/hero.webp);
+    height: 90vh;
+    background-size: cover;
+    background-position: left;
+  }
+  .description {
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    height: 50vh;
+    width: 35vw;
+    padding: 19vh 5vw;
+    background: #f85032;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 5px 1px #888;
+    color: #ddd;
+
+    .text {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+    .section-title {
+      font-size: 5rem;
+    }
   }
 }

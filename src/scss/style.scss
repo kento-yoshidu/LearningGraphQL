@@ -14,7 +14,8 @@ html {
 }
 
 .header {
-  background: $main-color;
+  //background: $main-color;
+  background-image: linear-gradient(120deg, rgba(21, 87, 153, .9), rgba(21, 153, 87, .9));
   height: 95vh;
   padding-top: 5%;
   display: flex;
@@ -204,70 +205,175 @@ html {
   }
 }
 
-.goal-section {
-  text-align: center;
-  color: #444;
+.progress-section {
+  background-color: #666;
+  padding: 50px 0;
+  color: #fff;
 
-  .section-title {
-    margin-bottom: 50px;
+  h2,
+  h3,
+  h4 {
+    color: #fff;
+    font-weight: 400;
   }
 
-  .sub-section {
-    margin: 50px 0;
+  .section-title {
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+  }
+
+  .wrapper {
+    margin: 30px 0;
     display: flex;
     justify-content: center;
+  }
 
-    div {
-      padding: 30px 50px;
-      border: 1px solid #444;
-      border-radius: 5px;
-      margin: 0 30px;
-
-      h3 {
-        color: #444;
-        font-size: 4rem;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size: 1.8rem;
-        text-align: left;
-        margin-bottom: 10px;
+  .hurry-up,
+  .running {
+    margin: 0 30px;
+    width: 28%;
+    h3 {
+      margin-bottom: 30px;
+      font-size: 3rem;
+      text-align: center;
+      .emoji {
+        font-size: 3.5rem;
       }
     }
   }
-  p {
-    font-size: 3rem;
-    font-weight: 900;
+  .finished {
+    width: 18%;
+    h3 {
+      margin-bottom: 30px;
+      font-size: 3rem;
+      text-align: left;
+    }
+  }
+  .progressbar-wrapper {
+    width: 90%;
+    margin: 0 auto 70px;
+    transition: .3s;
+
+    h4 {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+    }
+    span {
+      display: block;
+      margin: 10px 0 15px;
+      font-size: 1.5rem;
+    }
+    .progressbar {
+      margin-top: 10px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .side {
+        width: 100%;
+        height: 15px;
+        background-color: rgba(254, 254, 254, 0.3);
+        top: 0;
+        left: 0;
+        position: absolute;
+        .bar {
+          background-size: 150% 150%;
+          height:100%;
+          background-image: linear-gradient(120deg, rgba(0, 153, 87, .9), rgba(21, 153, 237, .7), rgba(0, 153, 87, .9));
+          box-shadow: 5px 5px 30px 5px rgba(0, 153, 87, 0.3);
+        }
+      }
+    }
+  }
+  .finished-list {
+    li {
+      font-size: 1.6rem;
+      list-style: none;
+      margin-bottom: 10px;
+
+      &::before {
+        content: "✨";
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .goal-section {
-    p {
-      font-size: 1.8rem;
-      width: 80%;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-    .sub-section {
+  .progress-section {
+    .wrapper {
       flex-direction: column;
-      margin: 30px 0;
-
-      div {
-        margin-bottom: 20px;
-        padding: 20px;
-
-        h3 {
-          font-size: 2.2rem;
-          margin-bottom: 10px;
-        }
-        p {
-          font-size: 1.5rem;
-          margin-bottom: 8px;
+    }
+    .hurry-up,
+    .running {
+      width: 90%;
+      margin: 0 auto 10px;
+      h3 {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        .emoji {
+          font-size: 2.1rem;
         }
       }
     }
+    .finished {
+      margin: 0 auto;
+      width: 90%;
+      h3 {
+        text-align: center;
+      }
+      ul {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
   }
+}
+
+
+@media screen and (max-width: 768px) {
+  .progressbar-wrapper {
+    width: 90%;
+    margin: 0 auto 50px;
+
+    h4 {
+      font-size: 14px;
+    }
+    span {
+      font-size: 12px;
+    }
+    .progressbar {
+      width: 90%;
+      .side {
+        height: 12px;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+0% {
+background-position: 0% 50%
+}
+100% {
+background-position: 100% 50%
+}
+}
+
+
+.bar-blog {
+  width:65%;
+}
+.bar-sample {
+  width: 45%;
+}
+.bar-jam {
+  width: 40%;
+}
+.bar-ecma {
+  width:1%;
+}
+.bar-app {
+  width: 0;
 }
 
 .section-links {

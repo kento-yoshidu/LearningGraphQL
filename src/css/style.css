@@ -357,169 +357,6 @@ html {
   }
 }
 
-.progress-section {
-  background-color: #666;
-  padding: 50px 0;
-  color: #fff;
-}
-.progress-section h2,
-.progress-section h3,
-.progress-section h4 {
-  color: #fff;
-  font-weight: 400;
-}
-.progress-section .section-title {
-  margin-bottom: 60px;
-  font-size: 2.5rem;
-}
-.progress-section .wrapper {
-  margin: 30px 0;
-  display: flex;
-  justify-content: center;
-}
-.progress-section .hurry-up,
-.progress-section .running {
-  margin: 0 30px;
-  width: 28%;
-}
-.progress-section .hurry-up h3,
-.progress-section .running h3 {
-  margin-bottom: 30px;
-  font-size: 3rem;
-  text-align: center;
-}
-.progress-section .hurry-up h3 .emoji,
-.progress-section .running h3 .emoji {
-  font-size: 3.5rem;
-}
-.progress-section .finished {
-  width: 18%;
-}
-.progress-section .finished h3 {
-  margin-bottom: 30px;
-  font-size: 3rem;
-  text-align: left;
-}
-.progress-section .progressbar-wrapper {
-  width: 90%;
-  margin: 0 auto 70px;
-  transition: 0.3s;
-}
-.progress-section .progressbar-wrapper h4 {
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-}
-.progress-section .progressbar-wrapper span {
-  display: block;
-  margin: 10px 0 15px;
-  font-size: 1.5rem;
-}
-.progress-section .progressbar-wrapper .progressbar {
-  margin-top: 10px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.progress-section .progressbar-wrapper .progressbar .side {
-  width: 100%;
-  height: 15px;
-  background-color: rgba(254, 254, 254, 0.3);
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-.progress-section .progressbar-wrapper .progressbar .side .bar {
-  background-size: 150% 150%;
-  height: 100%;
-  background-image: linear-gradient(120deg, rgba(0, 153, 87, 0.9), rgba(21, 153, 237, 0.7), rgba(0, 153, 87, 0.9));
-  box-shadow: 5px 5px 30px 5px rgba(0, 153, 87, 0.3);
-}
-.progress-section .finished-list li {
-  font-size: 1.6rem;
-  list-style: none;
-  margin-bottom: 10px;
-}
-.progress-section .finished-list li::before {
-  content: "✨";
-  font-size: 1.6rem;
-}
-
-@media screen and (max-width: 768px) {
-  .progress-section .wrapper {
-    flex-direction: column;
-  }
-  .progress-section .hurry-up,
-.progress-section .running {
-    width: 90%;
-    margin: 0 auto 10px;
-  }
-  .progress-section .hurry-up h3,
-.progress-section .running h3 {
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-  }
-  .progress-section .hurry-up h3 .emoji,
-.progress-section .running h3 .emoji {
-    font-size: 2.1rem;
-  }
-  .progress-section .finished {
-    margin: 0 auto;
-    width: 90%;
-  }
-  .progress-section .finished h3 {
-    text-align: center;
-  }
-  .progress-section .finished ul {
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .progressbar-wrapper {
-    width: 90%;
-    margin: 0 auto 50px;
-  }
-  .progressbar-wrapper h4 {
-    font-size: 14px;
-  }
-  .progressbar-wrapper span {
-    font-size: 12px;
-  }
-  .progressbar-wrapper .progressbar {
-    width: 90%;
-  }
-  .progressbar-wrapper .progressbar .side {
-    height: 12px;
-  }
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-.bar-blog {
-  width: 65%;
-}
-
-.bar-sample {
-  width: 45%;
-}
-
-.bar-jam {
-  width: 40%;
-}
-
-.bar-ecma {
-  width: 1%;
-}
-
-.bar-app {
-  width: 0;
-}
-
 .section-links .links-wrapper {
   display: flex;
   justify-content: center;
@@ -690,4 +527,173 @@ html {
   width: 8px;
   height: 8px;
   transition-delay: 0.2s;
+}
+
+.progress-section {
+  background-color: #666;
+  padding: 50px 0;
+  color: #fff;
+}
+.progress-section h2,
+.progress-section h3,
+.progress-section h4 {
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.progress-section .section-title {
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+}
+.progress-section .wrapper {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.progress-section .hurry-up,
+.progress-section .running {
+  margin: 0 30px;
+  width: 28%;
+}
+.progress-section .hurry-up h3,
+.progress-section .running h3 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  text-align: center;
+}
+.progress-section .hurry-up h3 .emoji,
+.progress-section .running h3 .emoji {
+  font-size: 3.5rem;
+}
+.progress-section .finished {
+  width: 18%;
+}
+.progress-section .finished h3 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  text-align: left;
+}
+.progress-section .progressbar-wrapper {
+  width: 90%;
+  margin: 0 auto 70px;
+  transition: 0.3s;
+}
+.progress-section .progressbar-wrapper h4 {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+.progress-section .progressbar-wrapper span {
+  display: block;
+  margin: 10px 0 15px;
+  font-size: 1.5rem;
+}
+.progress-section .progressbar-wrapper .progressbar {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.progress-section .progressbar-wrapper .progressbar .side {
+  width: 100%;
+  height: 15px;
+  background-color: rgba(254, 254, 254, 0.3);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.progress-section .progressbar-wrapper .progressbar .side .bar {
+  background-size: 150% 150%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(0, 153, 87, 0.9), rgba(21, 153, 237, 0.7), rgba(0, 153, 87, 0.9));
+  box-shadow: 5px 5px 30px 5px rgba(0, 153, 87, 0.3);
+}
+.progress-section .finished-list li {
+  font-size: 1.6rem;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.progress-section .finished-list li::before {
+  content: "✨";
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .progress-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  .progress-section .wrapper {
+    flex-direction: column;
+  }
+  .progress-section .hurry-up,
+.progress-section .running {
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+  .progress-section .hurry-up h3,
+.progress-section .running h3 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+  .progress-section .hurry-up h3 .emoji,
+.progress-section .running h3 .emoji {
+    font-size: 2.1rem;
+  }
+  .progress-section .finished {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .progress-section .finished h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .progress-section .finished ul {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .progressbar-wrapper {
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+  .progressbar-wrapper h4 {
+    font-size: 14px;
+  }
+  .progressbar-wrapper span {
+    font-size: 12px;
+  }
+  .progressbar-wrapper .progressbar {
+    width: 90%;
+  }
+  .progressbar-wrapper .progressbar .side {
+    height: 12px;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.bar-blog {
+  width: 65%;
+}
+
+.bar-sample {
+  width: 45%;
+}
+
+.bar-jam {
+  width: 40%;
+}
+
+.bar-ecma {
+  width: 1%;
+}
+
+.bar-app {
+  width: 0;
 }

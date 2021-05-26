@@ -115,6 +115,10 @@ html {
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
 }
 
+p {
+  line-height: 1.5;
+}
+
 .hero {
   position: relative;
   background-image: url("../images/hero.webp");
@@ -123,10 +127,19 @@ html {
   margin: 50px auto 100px;
   width: 80%;
   height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   z-index: 0;
 }
@@ -140,17 +153,21 @@ html {
   right: -5px;
   background: inherit;
   z-index: -1;
+  -webkit-transition: 0.1s;
   transition: 0.1s;
-  filter: grayscale(50%);
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 .hero:hover::before {
-  filter: grayscale(0%) blur(2px);
+  -webkit-filter: grayscale(0%) blur(2px);
+          filter: grayscale(0%) blur(2px);
 }
 .hero .hero-title {
   font-size: 6rem;
   margin-bottom: 30px;
 }
 .hero .hero-text {
+  text-align: center;
   width: 80%;
   font-size: 2rem;
   line-height: 1.5;
@@ -166,7 +183,8 @@ html {
     height: 50vh;
   }
   .hero::before {
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
   }
   .hero .hero-title {
     font-size: 3rem;
@@ -196,19 +214,26 @@ html {
   bottom: 0;
   right: 0;
   border: 2px solid #aaa;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 .btn-wrapper .btn:after {
-  transform: translate(7px, 3px);
+  -webkit-transform: translate(7px, 3px);
+          transform: translate(7px, 3px);
 }
 .btn-wrapper .btn:before {
-  transform: translate(-3px, -7px);
+  -webkit-transform: translate(-3px, -7px);
+          transform: translate(-3px, -7px);
 }
 .btn-wrapper .btn:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(245, 175, 25, 0.9)), to(rgba(241, 39, 17, 0.7)));
   background-image: linear-gradient(to right, rgba(245, 175, 25, 0.9), rgba(241, 39, 17, 0.7));
 }
 .btn-wrapper .btn:hover:after, .btn-wrapper .btn:hover:before {
-  transform: translate(0);
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -233,37 +258,50 @@ html {
   border-left: 10px solid #222;
   padding-left: 3rem;
   z-index: 2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sec1 .wrapper .title-wrapper .section-title,
+.sec1 .wrapper .title-wrapper .sub-title {
+  color: #222;
+  font-weight: 400;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .sec1 .wrapper .title-wrapper .section-title {
   margin-bottom: 10px;
-  color: #222;
   font-size: 7rem;
-  font-weight: 400;
-  transition: 0.4s;
 }
 .sec1 .wrapper .title-wrapper .sub-title {
-  color: #222;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 .sec1 .wrapper .text {
   background-color: #fff;
   width: 30%;
   position: absolute;
-  bottom: 20%;
+  bottom: 5%;
   right: 10%;
-  font-size: 2rem;
-  padding: 50px 30px;
+  padding: 50px 30px 20px;
   z-index: 2;
+}
+.sec1 .wrapper .text p {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+.sec1 .wrapper .text .btn.sec1-btn {
+  color: #666;
 }
 .sec1 .wrapper .image {
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-image: url(../images/sec1.webp);
   height: 80%;
   width: 70%;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -273,6 +311,7 @@ html {
   height: 100%;
   width: 20%;
   margin-left: 20%;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#eee), to(#aaa));
   background-image: linear-gradient(to left bottom, #eee, #aaa);
 }
 .sec1 .wrapper .back::before {
@@ -283,23 +322,25 @@ html {
   width: 100%;
   height: 100%;
   opacity: 0;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(245, 175, 25, 0.4)), to(rgba(241, 39, 17, 0.6)));
   background-image: linear-gradient(to left bottom, rgba(245, 175, 25, 0.4), rgba(241, 39, 17, 0.6));
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.sec1 .wrapper:hover .title-wrapper .section-title {
+.sec1 .wrapper:hover .title-wrapper {
+  border-left: 10px solid #f5af19;
+}
+.sec1 .wrapper:hover .title-wrapper .section-title,
+.sec1 .wrapper:hover .title-wrapper .sub-title {
   color: #f5af19;
 }
 .sec1 .wrapper:hover .back::before {
   opacity: 1;
 }
-.sec1 .wrapper:hover .image {
-  filter: grayscale(0%);
-}
-
 @media screen and (max-width: 768px) {
   .sec1 {
-    height: 90vh;
-    margin: 30px 0;
+    height: 75vh;
+    margin: 30px 0 0;
   }
   .sec1 .wrapper .title-wrapper {
     left: 5%;
@@ -310,50 +351,231 @@ html {
   }
   .sec1 .wrapper .text {
     bottom: 0;
-    border: 1px solid red;
     width: 50%;
+    padding: 30px 20px 10px;
+  }
+  .sec1 .wrapper .text p {
+    font-size: 1.5rem;
   }
   .sec1 .wrapper .image {
     width: 90%;
-    filter: none;
+    -webkit-filter: none;
+            filter: none;
   }
   .sec1 .wrapper .back {
     margin-left: 5%;
     height: 90%;
     width: 60%;
+    background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(245, 175, 25, 0.4)), to(rgba(241, 39, 17, 0.6)));
     background-image: linear-gradient(to left bottom, rgba(245, 175, 25, 0.4), rgba(241, 39, 17, 0.6));
   }
 }
 .sec2 {
-  height: 100vh;
+  overflow-x: hidden;
+  border: 1px solid #444;
+}
+.sec2 .wrapper {
   position: relative;
-  margin: 50px 0;
+  min-height: 80vh;
 }
-.sec2 .img {
-  background-image: url(../images/hero.webp);
-  height: 90vh;
-  background-size: cover;
-  background-position: left;
-}
-.sec2 .description {
+.sec2 .wrapper .title-wrapper {
   position: absolute;
-  top: 20vh;
-  right: 10vw;
+  top: -2%;
+  right: 20%;
+  border-left: 10px solid #222;
+  padding-left: 3rem;
+  z-index: 2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sec2 .wrapper .title-wrapper .section-title,
+.sec2 .wrapper .title-wrapper .sub-title {
+  color: #222;
+  font-weight: 400;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sec2 .wrapper .title-wrapper .section-title {
+  margin-bottom: 10px;
+  font-size: 7rem;
+}
+.sec2 .wrapper .title-wrapper .sub-title {
+  font-size: 1.9rem;
+}
+.sec2 .wrapper .box-wrapper {
+  margin: 5% auto 50px;
+  width: 78%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.sec2 .wrapper .box-wrapper .box {
+  height: 35vh;
+  width: 28%;
+}
+.sec2 .wrapper .box-wrapper .box .img {
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 55%;
+}
+.sec2 .wrapper .box-wrapper .box .text {
+  padding: 20px 10px;
+}
+.sec2 .wrapper .box-wrapper .box .text .box-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.sec2 .wrapper .box-wrapper .box .text p {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.sec2 .wrapper .box-wrapper .box.box-2 {
+  margin-top: 6%;
+}
+.sec2 .wrapper .box-wrapper .box.box-3 {
+  margin-top: 12%;
+}
+.sec2 .wrapper .back {
+  position: absolute;
+  top: 10%;
+  z-index: -1;
   height: 50vh;
-  width: 35vw;
-  padding: 19vh 5vw;
-  background: #f85032;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #e73827, #f85032);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  box-shadow: 0 0 5px 1px #888;
-  color: #ddd;
+  width: 110%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(241, 39, 17, 0.1)), to(rgba(245, 175, 25, 0.4)));
+  background-image: linear-gradient(to right, rgba(241, 39, 17, 0.1), rgba(245, 175, 25, 0.4));
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  margin-left: -5%;
 }
-.sec2 .description .text {
-  margin-bottom: 30px;
-  font-size: 1.5rem;
+.sec2 .wrapper .btn-wrapper {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
 }
-.sec2 .description .section-title {
-  font-size: 5rem;
+.sec2 .wrapper .btn-wrapper .btn.sec2-btn {
+  color: #444;
+}
+.sec2 .wrapper:hover .title-wrapper {
+  border-left: 10px solid #f5af19;
+}
+.sec2 .wrapper:hover .title-wrapper .section-title,
+.sec2 .wrapper:hover .title-wrapper .sub-title {
+  color: #f5af19;
+}
+.sec2 .wrapper:hover .back {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .sec2 {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .sec2 .wrapper .title-wrapper {
+    position: static;
+    top: 0;
+    right: 0;
+    margin-left: 5%;
+  }
+  .sec2 .wrapper .title-wrapper .section-title {
+    font-size: 4rem;
+  }
+  .sec2 .wrapper .title-wrapper .sub-title {
+    font-size: 1.9rem;
+  }
+  .sec2 .wrapper .box-wrapper {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10% auto 0;
+  }
+  .sec2 .wrapper .box-wrapper .box {
+    min-height: 45vh;
+    width: 85%;
+    margin: 0 auto 0px;
+  }
+  .sec2 .wrapper .box-wrapper .box .img {
+    height: 44%;
+  }
+  .sec2 .wrapper .box-wrapper .box .text .box-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  .sec2 .wrapper .box-wrapper .box .text p {
+    margin-bottom: 7px;
+    font-size: 1.3rem;
+  }
+  .sec2 .wrapper .box-wrapper .box:last-child {
+    margin-bottom: 50px;
+  }
+  .sec2 .wrapper .back {
+    display: none;
+  }
+  .sec2 .wrapper .btn-wrapper {
+    position: static;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+}
+.sec3 {
+  height: 100vh;
+  background-image: url(../images/sec1.webp);
+  background-size: cover;
+}
+.sec3 .wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+.sec3 .wrapper .title-wrapper {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  border-left: 10px solid #fff;
+  padding-left: 3rem;
+  z-index: 2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sec3 .wrapper .title-wrapper .section-title,
+.sec3 .wrapper .title-wrapper .sub-title {
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.sec3 .wrapper .title-wrapper .section-title {
+  margin-bottom: 10px;
+  font-size: 7rem;
+}
+.sec3 .wrapper .title-wrapper .sub-title {
+  font-size: 1.9rem;
+}
+.sec3 .wrapper .box-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sec3 .wrapper .box-wrapper .box {
+  height: 20vh;
+  width: 80%;
 }

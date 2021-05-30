@@ -127,19 +127,10 @@ p {
   margin: 50px auto 100px;
   width: 80%;
   height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   z-index: 0;
 }
@@ -153,14 +144,11 @@ p {
   right: -5px;
   background: inherit;
   z-index: -1;
-  -webkit-transition: 0.1s;
   transition: 0.1s;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
+  filter: grayscale(80%);
 }
 .hero:hover::before {
-  -webkit-filter: grayscale(0%) blur(2px);
-          filter: grayscale(0%) blur(2px);
+  filter: grayscale(0%) blur(2px);
 }
 .hero .hero-title {
   font-size: 6rem;
@@ -183,8 +171,7 @@ p {
     height: 50vh;
   }
   .hero::before {
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
   .hero .hero-title {
     font-size: 3rem;
@@ -214,26 +201,19 @@ p {
   bottom: 0;
   right: 0;
   border: 2px solid #aaa;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 .btn-wrapper .btn:after {
-  -webkit-transform: translate(7px, 3px);
-          transform: translate(7px, 3px);
+  transform: translate(7px, 3px);
 }
 .btn-wrapper .btn:before {
-  -webkit-transform: translate(-3px, -7px);
-          transform: translate(-3px, -7px);
+  transform: translate(-3px, -7px);
 }
 .btn-wrapper .btn:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(245, 175, 25, 0.9)), to(rgba(241, 39, 17, 0.7)));
   background-image: linear-gradient(to right, rgba(245, 175, 25, 0.9), rgba(241, 39, 17, 0.7));
 }
 .btn-wrapper .btn:hover:after, .btn-wrapper .btn:hover:before {
-  -webkit-transform: translate(0);
-          transform: translate(0);
+  transform: translate(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -241,7 +221,8 @@ p {
     margin: 30px 0;
   }
   .btn-wrapper .btn {
-    padding: 10px 70px;
+    padding: 8px 50px;
+    font-size: 1.6rem;
   }
 }
 .sec1 {
@@ -258,14 +239,12 @@ p {
   border-left: 10px solid #222;
   padding-left: 3rem;
   z-index: 2;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec1 .wrapper .title-wrapper .section-title,
 .sec1 .wrapper .title-wrapper .sub-title {
   color: #222;
   font-weight: 400;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec1 .wrapper .title-wrapper .section-title {
@@ -295,13 +274,11 @@ p {
   position: absolute;
   top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background-image: url(../images/sec1.webp);
   height: 80%;
   width: 70%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -311,7 +288,6 @@ p {
   height: 100%;
   width: 20%;
   margin-left: 20%;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#eee), to(#aaa));
   background-image: linear-gradient(to left bottom, #eee, #aaa);
 }
 .sec1 .wrapper .back::before {
@@ -322,9 +298,7 @@ p {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(245, 175, 25, 0.4)), to(rgba(241, 39, 17, 0.6)));
   background-image: linear-gradient(to left bottom, rgba(245, 175, 25, 0.4), rgba(241, 39, 17, 0.6));
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec1 .wrapper:hover .title-wrapper {
@@ -337,6 +311,7 @@ p {
 .sec1 .wrapper:hover .back::before {
   opacity: 1;
 }
+
 @media screen and (max-width: 768px) {
   .sec1 {
     height: 75vh;
@@ -351,7 +326,7 @@ p {
   }
   .sec1 .wrapper .text {
     bottom: 0;
-    width: 50%;
+    width: 60%;
     padding: 30px 20px 10px;
   }
   .sec1 .wrapper .text p {
@@ -359,20 +334,17 @@ p {
   }
   .sec1 .wrapper .image {
     width: 90%;
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
   .sec1 .wrapper .back {
     margin-left: 5%;
     height: 90%;
     width: 60%;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(245, 175, 25, 0.4)), to(rgba(241, 39, 17, 0.6)));
     background-image: linear-gradient(to left bottom, rgba(245, 175, 25, 0.4), rgba(241, 39, 17, 0.6));
   }
 }
 .sec2 {
   overflow-x: hidden;
-  border: 1px solid #444;
 }
 .sec2 .wrapper {
   position: relative;
@@ -385,14 +357,12 @@ p {
   border-left: 10px solid #222;
   padding-left: 3rem;
   z-index: 2;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec2 .wrapper .title-wrapper .section-title,
 .sec2 .wrapper .title-wrapper .sub-title {
   color: #222;
   font-weight: 400;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec2 .wrapper .title-wrapper .section-title {
@@ -405,11 +375,8 @@ p {
 .sec2 .wrapper .box-wrapper {
   margin: 5% auto 50px;
   width: 78%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 .sec2 .wrapper .box-wrapper .box {
   height: 35vh;
@@ -444,13 +411,10 @@ p {
   z-index: -1;
   height: 50vh;
   width: 110%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(241, 39, 17, 0.1)), to(rgba(245, 175, 25, 0.4)));
   background-image: linear-gradient(to right, rgba(241, 39, 17, 0.1), rgba(245, 175, 25, 0.4));
   opacity: 0;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
-  -webkit-transform: rotate(-1deg);
-          transform: rotate(-1deg);
+  transform: rotate(-1deg);
   margin-left: -5%;
 }
 .sec2 .wrapper .btn-wrapper {
@@ -491,16 +455,13 @@ p {
   }
   .sec2 .wrapper .box-wrapper {
     width: 90%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 10% auto 0;
   }
   .sec2 .wrapper .box-wrapper .box {
-    min-height: 45vh;
+    min-height: 50vh;
     width: 85%;
-    margin: 0 auto 0px;
+    margin: 0 auto 20px;
   }
   .sec2 .wrapper .box-wrapper .box .img {
     height: 44%;
@@ -543,14 +504,12 @@ p {
   border-left: 10px solid #fff;
   padding-left: 3rem;
   z-index: 2;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec3 .wrapper .title-wrapper .section-title,
 .sec3 .wrapper .title-wrapper .sub-title {
   color: #fff;
   font-weight: 400;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .sec3 .wrapper .title-wrapper .section-title {
@@ -560,22 +519,49 @@ p {
 .sec3 .wrapper .title-wrapper .sub-title {
   font-size: 1.9rem;
 }
-.sec3 .wrapper .box-wrapper {
+.sec3 .wrapper .information {
   position: absolute;
-  top: 60%;
-  left: 10%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin-top: 20vh;
+  left: 12%;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.5;
 }
-.sec3 .wrapper .box-wrapper .box {
-  height: 20vh;
-  width: 80%;
+.sec3 .wrapper .information dt {
+  position: absolute;
+  left: 0;
+  width: 10em;
+  padding-top: 30px;
+}
+.sec3 .wrapper .information dd {
+  padding-top: 30px;
+  padding-left: 8em;
+  padding-bottom: 10px;
+  border-bottom: solid 2px #fff;
+}
+@media screen and (max-width: 768px) {
+  .sec3 .wrapper .title-wrapper {
+    top: 5%;
+    left: 0;
+    margin-left: 5%;
+  }
+  .sec3 .wrapper .title-wrapper .section-title {
+    font-size: 4rem;
+  }
+  .sec3 .wrapper .title-wrapper .sub-title {
+    font-size: 1.9rem;
+  }
+  .sec3 .wrapper .information {
+    left: 5%;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .sec3 .wrapper .information dt {
+    padding-top: 20px;
+    width: 7em;
+  }
+  .sec3 .wrapper .information dd {
+    padding-top: 20px;
+    padding-left: 7em;
+  }
 }

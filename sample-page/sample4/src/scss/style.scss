@@ -14,6 +14,7 @@ html {
 p {
   line-height: 1.5;
 }
+
 .hero {
   position: relative;
   background-image: url("../images/hero.webp");
@@ -127,11 +128,12 @@ p {
   .btn-wrapper {
     margin: 30px 0;
     .btn {
-      padding: 10px 70px;
+      padding: 8px 50px;
+      font-size: 1.6rem;
     }
   }
-
 }
+
 .sec1 {
   height: 80vh;
 
@@ -226,8 +228,6 @@ p {
           opacity: 1;
         }
       }
-      .image {
-      }
     }
   }
 }
@@ -247,7 +247,7 @@ p {
       }
       .text {
         bottom: 0;
-        width: 50%;
+        width: 60%;
         padding: 30px 20px 10px;
         p {
           font-size: 1.5rem;
@@ -269,7 +269,6 @@ p {
 
 .sec2 {
   overflow-x: hidden;
-  border: 1px solid #444;
   .wrapper {
     position: relative;
     min-height: 80vh;
@@ -396,9 +395,9 @@ p {
         margin: 10% auto 0;
 
         .box {
-          min-height: 45vh;
+          min-height: 50vh;
           width: 85%;
-          margin: 0 auto 0px;
+          margin: 0 auto 20px;
 
           .img {
             height: 44%;
@@ -466,19 +465,61 @@ p {
       }
     }
 
-    .box-wrapper {
+    .information {
       position: absolute;
-      top: 60%;
-      left: 10%;
-      transform: translateY(-50%);
-      width: 60%;
+      margin-top: 20vh;
+      left: 12%;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1.5;
 
-      display: flex;
-      flex-direction: column;
+      dt {
+        position: absolute;
+        left: 0;
+        width: 10em;
+        padding-top: 30px;
+      }
+      dd {
+        padding-top: 30px;
+        padding-left: 8em;
+        padding-bottom: 10px;
+        border-bottom: solid 2px #fff;
+      }
 
-      .box {
-        height: 20vh;
-        width: 80%;
+      hr {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec3 {
+    .wrapper {
+      .title-wrapper {
+        top: 5%;
+        left: 0;
+        margin-left: 5%;
+        .section-title {
+          font-size: 4rem;
+        }
+        .sub-title {
+          font-size: 1.9rem;
+        }
+      }
+
+      .information {
+        left: 5%;
+        font-size: 1.5rem;
+        width: 90%;
+
+        dt {
+          padding-top: 20px;
+          width: 7em;
+        }
+        dd {
+          padding-top: 20px;
+          padding-left: 7em;
+        }
       }
     }
   }

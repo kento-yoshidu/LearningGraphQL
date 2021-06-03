@@ -557,7 +557,7 @@ background-position: 100% 50%
 
 
 .bar-blog {
-  width:65%;
+  width:70%;
 }
 .bar-sample {
   width: 45%;
@@ -570,4 +570,23 @@ background-position: 100% 50%
 }
 .bar-app {
   width: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15vh;
+  background-color: #444;
+  margin: 0;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  .footer-title {
+    font-size: 2rem;
+  font-weight: 100;
+  }
+  .copyright {
+    font-size: 1.8rem;
+  }
 }

@@ -205,6 +205,36 @@ html {
   }
 }
 
+.section-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 30px auto 50px;
+  .img {
+    display: block;
+    width: 35%;
+  }
+  p {
+    width: 40%;
+    color: #444;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-wrapper {
+    flex-direction: column;
+    .img {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 80%;
+    }
+  }
+}
 
 .section-links {
   .links-wrapper {
@@ -289,52 +319,49 @@ html {
   }
 }
 
-.sec3 {
-
-  .section-wrapper {
-
-  }
-}
-.section-constitution {
-  max-width: 1200px;
+.section-jamstack {
   margin: 0 auto;
-  .img {
-    display: block;
-    width: 50%;
-    margin: 50px auto;
-    @media screen and (max-width: 768px) {
-      width: 90%;
+  .section-wrapper {
+    width: 80%;
+    .img {
+      display: block;
+      width: 50%;
+      margin: 50px auto;
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
     }
-  }
-}
-
-.section-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  margin: 30px auto 50px;
-  .img {
-    display: block;
-    width: 35%;
-  }
-  p {
-    width: 40%;
-    color: #444;
-    font-size: 2rem;
-    line-height: 1.5;
+    div {
+      width: 45%;
+      p {
+        width: 100%;
+        text-indent: .7rem;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .section-wrapper {
-    flex-direction: column;
-    .img {
-      width: 80%;
-      margin-bottom: 20px;
-    }
-    p {
-      width: 80%;
+  .section-jamstack {
+    .section-wrapper {
+      width: 90%;
+      .img {
+        display: block;
+        width: 90%;
+        margin: 50px auto 0;
+        @media screen and (max-width: 768px) {
+          width: 90%;
+        }
+      }
+      div {
+        width: 95%;
+        p {
+          width: 100%;
+          text-indent: .7rem;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -393,6 +420,14 @@ html {
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-wrapper {
+    .link-btn {
+      font-size: 1.8rem;
+    }
+  } 
 }
 
 .progress-section {
@@ -547,12 +582,12 @@ html {
 }
 
 @keyframes gradient {
-0% {
-background-position: 0% 50%
-}
-100% {
-background-position: 100% 50%
-}
+  0% {
+  background-position: 0% 50%
+  }
+  100% {
+  background-position: 100% 50%
+  }
 }
 
 

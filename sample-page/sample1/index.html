@@ -13,9 +13,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="./src/css/index.css" type="text/css">
-<link rel="preload" href="./src/fontawesome/css/all.min.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="../../common_src/fontawesome/css/all.min.css" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Amiri" as="font" onload="this.onload=null;this.rel='stylesheet'"><!-- title用フォント -->
 <title>Sample1</title>
+<script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <nav class="global-nav" id="js-global-nav">
@@ -73,19 +74,19 @@
           <h2 class="title topic-title">初めてのHTML & CSS</h2>
           <i class="topic-icon fab fa-html5"></i>
           <p class="topic-text">前提知識はほとんどなくてOKです。HTMLとCSSを使用してWebページを作成します。</p>
-          <a class="topic-btn" href="https://blog.toriwatari.work/category/HelloWeb/page/1/" target="_blink">more</a>
+          <a class="topic-btn" href="https://blog.toriwatari.work/series/HelloWeb/page/1/" target="_blink">more</a>
         </div>
         <div class="topic">
           <h2 class="title topic-title">Git中級者を目指す</h2>
           <i class="topic-icon fab fa-git-square"></i>
           <p class="topic-text">Gitの入門書を読み終わった人向けの、さらなるステップへ進むためのGit講座です。</p>
-          <a class="topic-btn" href="https://blog.toriwatari.work/category/GitAdvance/page/1/" target="_blink">more</a>
+          <a class="topic-btn" href="https://blog.toriwatari.work/series/GitAdvance/page/1/" target="_blink">more</a>
         </div>
         <div class="topic">
           <h2 class="title topic-title">日記</h2>
           <i class="topic-icon fas fa-book"></i>
           <p class="topic-text">プログラミング以外のことを記事にしています。</p>
-          <a class="topic-btn" href="https://blog.toriwatari.work/category/Diary/page/1/" target="_blink">more</a>
+          <a class="topic-btn" href="https://blog.toriwatari.work/series/Diary/page/1/" target="_blink">more</a>
         </div>
       </div><!-- article-flex -->
       <div class="btn-wrapper"><a href="https://blog.toriwatari.work/page/1/" class="btn" target="_blink">read more</a></div>
@@ -177,6 +178,11 @@
         </picture>
       </div><!-- //link-wrapper -->
     </section>
+
+    <div id="app">
+      <p>{{ hoge }}</p>
+    </div>
+
   </main>
 
   <footer class="footer">
@@ -192,7 +198,7 @@
       <section class="footer-section">
         <h3 class="title section-title">Techs</h3>
         <ul class="footer-list">
-          <li class="list-item"><a href="https://blog.toriwatari.work/page/1/" target="_blink">CSS Animation & Tips</a></li>
+          <li class="list-item"><a href="https://cssanimation.toriwatari.work/" target="_blink">CSS Animation & Tips</a></li>
         </ul>
       </section><!-- //footer-section -->
       <section class="footer-section">
@@ -211,6 +217,7 @@
   //nav固定
   setCloneNav();
   </script>
+  <script src="./src/js/vue.js"></script>
 
 </body>
 </html>

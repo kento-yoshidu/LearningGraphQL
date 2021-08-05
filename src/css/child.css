@@ -1,0 +1,333 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+@keyframes top-to-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  99.9%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sa {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.sa--lr {
+  transform: translate(-100px, 0);
+}
+
+.sa--rl {
+  transform: translate(100px, 0);
+}
+
+.sa--up {
+  transform: translate(0, 200px);
+}
+
+.sa--down {
+  transform: translate(0, -100px);
+}
+
+.sa--scaleUp {
+  transform: scale(0.5);
+}
+
+.sa--scaleDown {
+  transform: scale(1.5);
+}
+
+.sa--rotateL {
+  transform: rotate(1800deg);
+}
+
+.sa--rotateR {
+  transform: rotate(-180deg);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  background-image: linear-gradient(120deg, rgba(21, 87, 153, 0.9), rgba(21, 153, 87, 0.9));
+  height: 95vh;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-weight: 100;
+}
+.header .header-title,
+.header .header-sub-title,
+.header p,
+.header .my-skill {
+  font-family: "Open Sans", sans-serif;
+  animation-name: top-to-down;
+  animation-duration: 2s;
+}
+.header .header-title,
+.header .header-sub-title {
+  font-weight: 100;
+  text-shadow: -1px 2px 0 #646464;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .header .header-title,
+.header .header-sub-title {
+    width: 80%;
+  }
+}
+.header .header-title {
+  margin-bottom: 30px;
+  font-size: 6.3rem;
+  letter-spacing: 4px;
+}
+@media (max-width: 768px) {
+  .header .header-title {
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
+}
+.header .header-sub-title {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .header .header-sub-title {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+}
+.header p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ddd;
+}
+@media (max-width: 768px) {
+  .header p {
+    font-size: 1.5rem;
+  }
+}
+.header p time {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.header .my-skill {
+  display: block;
+  width: 60%;
+  padding: 2%;
+  color: #ddd;
+  text-decoration: none;
+}
+.header .my-skill:hover .skill-wrapper div p {
+  color: orange;
+}
+@media screen and (max-width: 768px) {
+  .header .my-skill {
+    width: 90%;
+  }
+}
+.header .my-skill .my-skill-title {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: 0.2s;
+}
+.header .my-skill .skill-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.header .my-skill .skill-wrapper div {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 15px;
+  text-align: center;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .header .my-skill .skill-wrapper div {
+    width: 95%;
+  }
+}
+.header .my-skill .skill-wrapper div p {
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .header .my-skill .skill-wrapper div p {
+    font-size: 1.3rem;
+  }
+}
+.header .my-skill .skill-wrapper div p i {
+  margin-right: 8px;
+  font-size: 2.2rem;
+}
+@media screen and (max-width: 768px) {
+  .header .my-skill .skill-wrapper div p i {
+    font-size: 1.9rem;
+  }
+}
+.header .arrow-container {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .header .arrow-container {
+    margin-top: -20px;
+  }
+}
+.header .arrow-container:hover .arrow {
+  border-color: orange;
+}
+.header .arrow-container .arrow {
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  animation: arrow-move 1.5s infinite;
+  transition: 0.5s;
+}
+.header .arrow-container .arrow:not(:first-child) {
+  margin-top: -10px;
+}
+.header .arrow-container .arrow:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.header .arrow-container .arrow:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.header .arrow-container .arrow:nth-child(3) {
+  animation-delay: 0.45s;
+}
+@keyframes arrow-move {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px) rotate(45deg);
+  }
+}

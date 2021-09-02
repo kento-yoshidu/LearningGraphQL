@@ -1,240 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177277170-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./src/css/style.css" rel="stylesheet">
+	<title>JamstackなWebサイトを構築してみた</title>
+	<script src="./src/js/script.js"></script>
 
-    gtag('config', 'UA-177277170-1');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="/src/css/child.css" rel="stylesheet">
-  <link href="/common_src/fontawesome/css/all.min.css" rel="stylesheet">
-  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">-->
-  <title>JamstackなWebサイトを構築してみた</title>
 </head>
 <body>
+	<header class="header view" id="view1">
+		<h1><span class="char-gradient">Jamstack</span>なWebサイトを構築してみた</h1>
+		<p>2021年度中に10個の<span class="char-gradient">Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+		<ul>
+			<li>Static Site Generator</li>
+			<li><span class="char-gradient">&</span></li>
+			<li>HeadlessCMS or Text file</li>
+			<li><span class="char-gradient">&</span></li>
+			<li>Hosting Web Service</li>
+		</ul>
 
-  <header class="header child-header" id="header">
-    <h2 class="header-sub-title">toriwatari</h2>
-    <h1 class="header-title">Portfolio Web Site</h1>
-    <p>更新日 : <time>2021-08-02</time></p>
+		<div class="scroll">SCROLL</div>
+	</header>
 
-    <a href="/skill/" class="my-skill">
-      <h3 class="my-skill-title">I <i class="fas fa-heart"></i> ...</h3>
-      <div class="skill-wrapper">
-        <div>
-          <p><i class="fab fa-html5"></i>HTML5</p>
-          <p><i class="fab fa-css3"></i>CSS3</p>
-          <p><i class="fab fa-js-square"></i>TypeScript</p>
-        </div>
-        <div>
-          <p><i class="fab fa-node"></i>Node.js</p>
-          <p><i class="fab fa-vuejs"></i>Vue.js</p>
-          <p><i class="fab fa-js-square"></i>GatsbyJS</p>
-        </div>
-        <div>
-          <p><i class="fas fa-database"></i>MongoDB</p>
-          <p><i class="fab fa-docker"></i>Docker</p>
-          <p><i class="fas fa-cloud"></i>AWS</p>
-        </div>
-      </div>
-    </a>
+	<ol id="viewList" class="viewList">
+    <li><a href="#view1">●</a></li>
+		<li><span class="bar"></span></li>
+    <li><a href="#view2">●</a></li>
+    <li><a href="#view3">●</a></li>
+    <li><a href="#view4">●</a></li>
+    <li><a href="#view5">●</a></li>
+  </ol>
 
-    <a class="arrow-container" href="#sec1">
-      <div class="arrow"></div>
-      <div class="arrow"></div>
-      <div class="arrow"></div>
-    </a>
-  </header> 
+	<section class="section view" id="view2">
+		サンプルのWebサイトへのリンクいっぱい
+	</section>
 
-  <section class="section section-links" id="sec1">
-    <h2 class="section-title links-title">Sample Pages</h2> 
+	<section class="section view" id="view3">
+		サンプルのWebサイトへのリンクいっぱい
+	</section>
 
-    <div class="links-wrapper">
-      <a
-        class="link-item sa sa--up"
-        href="sample-page/sample1/"
-      >
-        <h3 class="title link-title">Sample1</h3>
-        <i class="fas fa-code"></i>
-        <p>サンプルページ1</p>
-      </a>
+	<section class="section view" id="view4">
+		サンプルのWebサイトへのリンクいっぱい
+	</section>
 
-      <a
-        class="link-item sa sa--up"
-        href="sample-page/sample2/"
-      >
-        <h3 class="title link-title">Sample2</h3>
-        <div class="nogi"></div>
-        <p>サンプルページ2です。〇木坂46をテーマにページを作成しました。</p>
-      </a>
-
-      <a
-        class="link-item sa sa--up"
-        href="sample-page/sample3/"
-      >
-        <h3 class="title link-title">Sample3</h3>
-        <i class="fas fa-code"></i>
-        <p>サンプルページ3</p>
-      </a>
-    </div>
-
-    <div class="links-wrapper">
-      <a
-        class="link-item sa sa--up"
-        href="sample-page/sample4/"
-      >
-        <h3 class="title link-title">Sample4</h3>
-        <i class="fas fa-code"></i>
-        <p>サンプルページ4</p>
-      </a>
-
-      <a
-        class="link-item sa sa--up"
-        href="https://nuxtdentalclinic.netlify.app/"
-      >
-        <h3 class="title link-title">Sample5</h3>
-        <i class="fab fa-vuejs"></i>
-        <p>Nuxt.jsを用いて歯医者さんのWebサイトを作りました。microCMSでコンテンツを管理しています。</p>
-      </a>
-
-      <a
-        class="link-item sa sa--up"
-        href="https://gatsbycafesite.netlify.app/"
-      >
-        <h3 class="title link-title">Sample6</h3>
-        <i class="fab fa-react"></i>
-        <p>GatsbyとContentfulを組み合わせてブログ機能付きのカフェのWebサイトを作りました。</p>
-      </a>
-    </div>
-
-    <div class="btn-wrapper">
-      <a href="#" class="link-btn">More</a>
-    </div>
-  </section>
-
-  <section class="section sec3 sa sa--up" id="sec3">
-    <h2 class="section-title">CSS Animation & Tips</h2>
-
-    <div class="section-wrapper">
-      <img src="./src/images/css.svg" class="img">
-      <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Nuxt.js + AWS Amplifyで構築しました。</p>
-    </div>
-    <div class="btn-wrapper">
-      <a href="https://cssanimation.toriwatari.work/" class="link-btn" target="_blank">サイトを見る</a>
-    </div>
-  </section>
-
-  <section class="section sa sa--up" id="sec4">
-    <h2 class="section-title">Blog</h2>
-
-    <div class="section-wrapper">
-      <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
-      <img src="./src/images/gatsby.svg" class="img">
-    </div>
-
-    <div class="btn-wrapper">
-      <a href="https://blog.toriwatari.work" class="link-btn" target="_blank">サイトを見る</a>
-    </div>
-  </section>
-
-  <section class="section section-jamstack" id="sec5">
-    <h2 class="section-title">JamstackなWebサイトを構築しました</h2>
-    <div class="section-wrapper">
-      <!--<img src="./src/images/static.svg" class="img">-->
-        <div>
-          <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。</p>
-          <p>2021年度中に10個作成するのが目標です。</p>
-        </div>
-        <img src="./src/images/jamstack.png" class="img" />
-    </div>
-
-    <div class="btn-wrapper">
-      <a href="constitution/" class="link-btn">More</a>
-    </div>
-  </section>
-
-  <section class="section progress-section">
-    <h2 class="section-title">2021年の個人タスク</h2>
-
-    <div class="wrapper">
-      <div class="running">
-        <h3>Running...<span class="emoji">️🏃️💨</span></h3>
-
-        <div class="progressbar-wrapper">
-          <h4>GatsbyBlogのクオリティを上げる(当社比)</h4>
-          <span>70%</span>
-          <div class="progressbar">
-            <div class="side">
-              <div class="bar bar-blog"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="progressbar-wrapper">
-          <h4>サンプルWebサイトを20個作る</h4>
-          <span>45%</span>
-          <div class="progressbar">
-            <div class="side">
-              <div class="bar bar-sample"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="progressbar-wrapper">
-          <h4>Jamstackなサイトを10個作る</h4>
-          <span>40%</span>
-          <div class="progressbar">
-            <div class="side">
-              <div class="bar bar-jam"></div>
-            </div>
-          </div>
-        </div>
-      </div><!-- running... -->
-
-      <div class="hurry-up">
-        <h3>Hurry Up‍<span class="emoji">️🏇️💦</span></h3>
-
-        <div class="progressbar-wrapper">
-          <h4>ECMAScript2021を全部読む</h4>
-          <span>1%</span>
-          <div class="progressbar">
-            <div class="side">
-              <div class="bar bar-ecma"></div>
-            </div>
-          </div>
-        </div>
-        <div class="progressbar-wrapper">
-          <h4>Vue.js + GraphQL + MongoDBで何か作る</h4>
-          <span>0%</span>
-          <div class="progressbar">
-            <div class="side">
-              <div class="bar bar-app"></div>
-            </div>
-          </div>
-        </div>
-      </div><!-- hurry-up -->
-
-      <div class="finished">
-        <h3><span class="emoji">️🚀</span>Finished‍<span class="emoji">️🚀</span></h3>
-
-        <ul class="finished-list">
-          <li>まだない</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <h2 class="footer-title">toriwatari Portfolio Web Site</h2>
-    <p class="copyright">toriwatari @2021</p>
-  </footer>
-
-  <script src="./src/js/fadein.js"></script>
+	<section class="section view" id="view5">
+		ブログ記事を載せる
+	</section>
+	<!--https://parashuto.com/rriver/development/position-sticky-->
+	<!--https://gihyo.jp/design/serial/01/css-animation/0016-->
 </body>
 </html>

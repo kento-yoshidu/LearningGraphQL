@@ -61,11 +61,27 @@ img {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.main-nav {
+		margin-top: 10px;
+		font-size: 1rem;
+		li {
+			margin: 0 20px;
+		}
+	}	
+}
+
 .page-title {
 	font-size: 5rem;
 	font-family: "Philosopher", serif;
 	text-transform: uppercase;
 	font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+	.page-title {
+		font-size: 2.5rem;
+	}	
 }
 
 .home-content {
@@ -87,6 +103,12 @@ img {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.home-content {
+		margin-top: 20px;
+	}	
+}
+
 #news {
 	background-image: url(../../images/news-bg.jpg);
 	height: 270px;
@@ -100,6 +122,16 @@ img {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 50px;
+
+	.post-title {
+		font-size: 2rem;
+		font-weight: normal;
+		font-family: "Yu Mincho", "YuMincho", serif;
+	}
+	.post-title,
+	.post-cat {
+		margin-left: 120px;
+	}
 }
 
 article {
@@ -129,10 +161,39 @@ article {
 			}
 		}
 	}
+	img {
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 1rem;
+	}
 }
 
 aside {
 	width: 22%;
+	.sub-title {
+		padding: 0 8px 8px;
+		border-bottom: 2px #0bd solid;
+		font-size: 1.375rem;
+		font-weight: normal;
+	}
+	.sub-menu {
+		margin-bottom: 60px;
+		list-style: none;
+		li {
+			border-bottom: 1px #ddd solid;
+			a {
+				color: #432;
+				padding: 10px;
+				&:hover {
+					color: #0bd;
+				}
+			}
+		}
+	}
+	p {
+		padding: 12px 10px;
+	}
 }
 
 footer {

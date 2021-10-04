@@ -98,10 +98,36 @@ input, select {
   vertical-align: middle;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgba(14, 24, 42, 0.99);
   font-family: "游ゴシック", "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  scroll-behavior: smooth;
+}
+
+.nav {
+  position: fixed;
+  background-image: linear-gradient(to right, #E7017A, #DF4A1F);
+  width: 100%;
+  z-index: 2;
+}
+.nav ul {
+  padding: 13px 0;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.nav ul li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .view {
@@ -120,14 +146,15 @@ body {
 .header h1 {
   margin-bottom: 4vh;
   color: #e2e8f0;
-  font-size: 3rem;
-  letter-spacing: 1.5px;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
 }
 .header p {
   margin-bottom: 6vh;
   font-size: 1.3rem;
   text-align: center;
   letter-spacing: 1px;
+  width: 50%;
 }
 .header .box {
   position: relative;
@@ -141,6 +168,7 @@ body {
   background-color: rgba(14, 24, 42, 0.99);
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 .header .box::before {
   content: "";
@@ -148,18 +176,18 @@ body {
   height: 170%;
   width: 200px;
   background-image: linear-gradient(#E7017A, #DF4A1F);
-  animation: animate 4s linear infinite;
+  animation: animate 8s linear infinite;
 }
 .header .box::after {
   content: "";
   position: absolute;
   inset: 4px;
-  background-color: rgba(14, 24, 42, 0.99);
+  background-color: rgba(13, 22, 39, 0.99);
 }
 .header .box li {
   position: relative;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 1px;
   z-index: 1;
@@ -190,7 +218,7 @@ body {
     font-size: 0.9rem;
   }
   .header .box {
-    width: 60%;
+    width: 65%;
     height: 200px;
   }
   .header .box::before {
@@ -200,6 +228,12 @@ body {
     font-size: 1rem;
   }
 }
+.cutout {
+  font-size: 1.7em;
+  color: transparent;
+  -webkit-text-stroke: 1px #E7017A;
+}
+
 .char-gradient {
   color: #E7017A;
   background: -webkit-linear-gradient(0deg, #E7017A 40%, #DF4A1F 60%);
@@ -211,7 +245,6 @@ body {
 
 .section {
   color: #fff;
-  border: 1px solid #fff;
 }
 
 .viewList {

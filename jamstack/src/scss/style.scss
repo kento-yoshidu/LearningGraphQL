@@ -5,6 +5,10 @@ $main-color2: #DF4A1F;
 $bg-gradient: rgb(14, 24, 42, .99);
 $gradient-primary: $main-color linear-gradient(91.78deg, $main-color 2.57%, $main-color2 96.33%);
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: $bg-gradient;
 	font-family: "游ゴシック", "Yu Gothic",
@@ -14,9 +18,30 @@ body {
     "Hiragino Sans",
     Meiryo,
     sans-serif;
-		scroll-behavior: smooth;
 }
 
+.nav {
+	position: fixed;
+	background-image: linear-gradient(to right, $main-color, $main-color2);
+	width: 100%;
+	z-index: 2;
+	ul {
+		padding: 13px 0;
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		li {
+			font-size: 1.2rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
 .view {
 	height: 100vh;
 }
@@ -32,14 +57,15 @@ body {
 	h1 {
 		margin-bottom: 4vh;
 		color: rgb(226, 232, 240);
-		font-size: 3rem;
-		letter-spacing: 1.5px;
+		font-size: 2.2rem;
+		letter-spacing: 2px;
 	}
 	p {
 		margin-bottom: 6vh;
 		font-size: 1.3rem;
 		text-align: center;
 		letter-spacing: 1px;
+		width: 50%;
 	}
 	.box {
 		position: relative;
@@ -53,24 +79,25 @@ body {
 		background-color: $bg-gradient;
 		overflow: hidden;
 		border-radius: 10px;
+		margin-bottom: 50px;
 		&::before {
 			content: "";
 			position: absolute;
 			height: 170%;
 			width: 200px;
 			background-image: linear-gradient($main-color, $main-color2);
-			animation: animate 4s linear infinite;
+			animation: animate 8s linear infinite;
 		}
 		&::after {
 			content: "";
 			position: absolute;
 			inset: 4px;
-			background-color: $bg-gradient;
+			background-color: darken($bg-gradient, 0.9);
 		}
 		li {
 			position: relative;
 			text-align: center;
-			font-size: 1.7rem;
+			font-size: 1.4rem;
 			font-weight: 500;
 			letter-spacing: 1px;
 			z-index: 1;
@@ -80,7 +107,7 @@ body {
 		position: absolute;
 		bottom: 8vh;
 		font-size: 1.1rem;
-			font-weight: 500;
+		font-weight: 500;
 		border-bottom: 1.5px solid #fff;
 	}
 }
@@ -105,7 +132,7 @@ body {
 			font-size: 0.9rem;
 		}
 		.box {
-			width: 60%;
+			width: 65%;
 			height: 200px;
 			&::before {
 				width: 150px;
@@ -117,6 +144,13 @@ body {
 	}
 	
 }
+
+.cutout {
+	font-size: 1.7em;
+	color: transparent;
+	-webkit-text-stroke: 1px $main-color;
+}
+
 .char-gradient {
 	color: #E7017A;
 	background: -webkit-linear-gradient(0deg,  #E7017A 40%, #DF4A1F 60%);
@@ -128,7 +162,6 @@ body {
 
 .section {
 	color: #fff;
-	border: 1px solid #fff;
 }
 
 .viewList {

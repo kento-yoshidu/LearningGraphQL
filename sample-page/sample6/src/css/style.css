@@ -37,6 +37,12 @@ img {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .logo {
   width: 210px;
   margin-top: 14px;
@@ -113,6 +119,11 @@ img {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #news .page-title {
+    margin-top: 30px;
+  }
+}
 .news-contents {
   display: flex;
   justify-content: space-between;
@@ -128,6 +139,11 @@ img {
   margin-left: 120px;
 }
 
+@media screen and (max-width: 768pc) {
+  .news-contents {
+    flex-direction: column;
+  }
+}
 article {
   width: 74%;
 }
@@ -188,6 +204,62 @@ aside .sub-menu li a:hover {
 }
 aside p {
   padding: 12px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  article,
+aside {
+    width: 100%;
+  }
+
+  article .post-info {
+    margin-bottom: 30px;
+  }
+  article .post-info .post-date {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  article .post-info .post-date span {
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
+  article .post-info .post-title,
+article .post-info .post-cat {
+    margin-left: 80px;
+  }
+  article .post-info .post-title {
+    font-size: 1.375rem;
+  }
+  article .post-info .post-cat {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  aside {
+    margin-top: 60px;
+  }
+}
+#menu {
+  background-image: url(../../images/menu-bg.jpg);
+}
+
+.menu-content {
+  max-width: 560px;
+  margin-top: 10%;
+}
+.menu-content .page-title {
+  text-align: center;
+}
+.menu-content p {
+  margin: 10px 0 0;
+  font-size: 1.125rem;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer {

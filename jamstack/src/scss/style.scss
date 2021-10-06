@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background-color: $bg-gradient;
+	background-image: linear-gradient(to left bottom, rgba($bg-gradient, 0.99), $bg-gradient);
 	font-family: "游ゴシック", "Yu Gothic",
 		"Helvetica Neue",
     Arial,
@@ -21,7 +21,7 @@ body {
 }
 
 .nav {
-	position: fixed;
+	//position: fixed;
 	background-image: linear-gradient(to right, $main-color, $main-color2);
 	width: 100%;
 	z-index: 2;
@@ -42,6 +42,7 @@ body {
 		}
 	}
 }
+
 .view {
 	height: 100vh;
 }
@@ -54,6 +55,7 @@ body {
 	align-items: center;
 	color: rgb(226, 232, 240);
 	line-height: 1.5;
+	margin-top: -50px;
 	h1 {
 		margin-bottom: 4vh;
 		color: rgb(226, 232, 240);
@@ -160,35 +162,55 @@ body {
 	text-shadow: 0 0 3px 3px $main-color;
 }
 
-.section {
-	color: #fff;
-}
-
 .viewList {
 	position: fixed;
 	top: 50%;
 	right: 60px;
 	transform: translateY(-50%);
 	list-style: none;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
 	li {
-		margin-bottom: 10px;
+			border-radius: 2px;
 		a {
 			display: block;
 			position: relative;
 			text-decoration: none;
 			color: #fff;
-			font-size: 1.2rem;
+			font-size: 2rem;
 			z-index: 2;
 			transition: .35s;
+			padding: 15px 20px;
+		}
+		&:hover {
+			box-shadow: 0 0 20px 1px rgba($main-color2, 0.4);
+			a {
+				color: $main-color2;
+			}
 		}
 	}
-	a.active {
-		color: $main-color;
+	li.active {
+		box-shadow: 0 0 20px 1px rgba($main-color, 0.4);
+		a {
+			color: rgba($main-color, 0.8);
+		}
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.viewList {
 		display: none;
+	}
+}
+
+.section {
+	padding: 50px 0;
+	.section-title {
+		color: transparent;
+		-webkit-text-stroke: 1px #fff;
+		font-size: 4rem;
+		font-weight: 100;
+		letter-spacing: 3px;
+		text-align: center;
 	}
 }

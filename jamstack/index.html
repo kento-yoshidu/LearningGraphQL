@@ -5,51 +5,68 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./src/css/style.css" rel="stylesheet">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<title>JamstackなWebサイトを構築してみた</title>
 	<script src="./src/js/script.js"></script>
-
 </head>
 <body>
 	<nav class="nav">
 		<ul>
 			<li><a href="#">HOME</a></li>
-			<li><a href="#">What's Jamstack?</a></li>
-			<li><a href="#">Sample Site</a></li>
-			<li><a href="#">Blog Article</a></li>
-		</ul>
-	</nav>
+		<li><a href="#">What's Jamstack?</a></li>
+		<li><a href="#">Sample Site</a></li>
+		<li><a href="#">Blog Article</a></li>
+	</ul>
+</nav>
 
-	<header class="header view" id="view1">
-		<h1><span class="cutout">Jamstack</span>なWebサイトを構築してみた</h1>
-		<p>2021年度中に10個の<span class="cutout">Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
-		<ul class="box">
-			<li>Static Site Generator</li>
-			<li><span class="char-gradient">&</span></li>
-			<li>HeadlessCMS<br>Text file</li>
-			<li><span class="char-gradient">&</span></li>
-			<li>Hosting Web Service</li>
-		</ul>
+<header class="header view" id="view1">
+	<h1><span class="cutout">Jamstack</span>なWebサイトを構築してみた</h1>
+	<p>2021年度中に10個の<span class="cutout">Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+	<ul class="box">
+		<li>Static Site Generator</li>
+		<li><span class="char-gradient">&</span></li>
+		<li>HeadlessCMS<br>Text file</li>
+		<li><span class="char-gradient">&</span></li>
+		<li>Hosting Web Service</li>
+	</ul>
 
-		<div class="scroll">SCROLL</div>
-	</header>
+	<div class="scroll">SCROLL</div>
+</header>
 
-	<ol id="viewList" class="viewList">
-    <li><a href="#view1">●</a></li>
-		<li><span class="bar"></span></li>
-    <li><a href="#view2">●</a></li>
-    <li><a href="#view3">●</a></li>
-    <li><a href="#view4">●</a></li>
-    <li><a href="#view5">●</a></li>
-  </ol>
+<ol id="viewList" class="viewList">
+	<li data-li="view1"><a href="#view1"><ion-icon name="home-outline"></ion-icon></a></li>
+	<li data-li="view2"><a href="#view2"><ion-icon name="help-circle-outline"></ion-icon></a></li>
+	<li data-li="view3"><a href="#view3"><ion-icon name="arrow-redo-outline"></ion-icon></a></li>
+	<li data-li="view4"><a href="#view4"><ion-icon name="document-text-outline"></ion-icon></a></li>
+</ol>
 
 	<section class="section view" id="view2">
-		<ul style="font-size: 3rem; text-align: center;">
-			<li><a href="https://blog.toriwatari.work/page/1/">Gatsby Blog</a></li>
-			<li><a href="https://cssanimation.toriwatari.work/">CSS Animation & Tips</a></li>
-			<li><a href="https://nuxtdentalclinic.netlify.app/">Nuxt Dental Clinic</a></li>
-			<li><a href="https://gatsbycafesite.netlify.app/">Gatsby Cafe</a></li>
-			<li><a href="https://lucid-ramanujan-f953c7.netlify.app/">Temp</a></li>
-		</ul>
+
+		<h2 class="section-title">
+			What's Jamstack?
+		</h2>
+		<div class="box">
+			<span></span>
+			<div class="content">
+				<h3>title</h3>
+				<p>jgpiajrpajg@jaw@jgwa@jgparjpja@o</p>
+			</div>
+		</div>
+		<div class="box">
+			<span></span>
+			<div class="content">
+				<h3>title</h3>
+				<p>jgpiajrpajg@jaw@jgwa@jgparjpja@o</p>
+			</div>
+		</div>
+		<div class="box">
+			<span></span>
+			<div class="content">
+				<h3>title</h3>
+				<p>jgpiajrpajg@jaw@jgwa@jgparjpja@o</p>
+			</div>
+		</div>
 	</section>
 
 	<section class="section view" id="view3">
@@ -60,10 +77,5 @@
 		サンプルのWebサイトへのリンクいっぱい
 	</section>
 
-	<section class="section view" id="view5">
-		ブログ記事を載せる
-	</section>
-	<!--https://parashuto.com/rriver/development/position-sticky-->
-	<!--https://gihyo.jp/design/serial/01/css-animation/0016-->
 </body>
 </html>

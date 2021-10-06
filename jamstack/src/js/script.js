@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     currentActiveIndex.classList.remove("active");
   }
   // 引数で渡されたDOMが飛び先のaタグを選択し、activeクラスを付与
-  const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
+  //const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
+  const newActiveIndex = document.querySelector(`li[data-li='${element.id}']`);
   newActiveIndex.classList.add("active");
 }
 

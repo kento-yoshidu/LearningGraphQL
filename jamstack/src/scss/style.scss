@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background-color: $bg-gradient;
+	background-image: linear-gradient(to left bottom, rgba($bg-gradient, 0.99), $bg-gradient);
 	font-family: "游ゴシック", "Yu Gothic",
 		"Helvetica Neue",
     Arial,

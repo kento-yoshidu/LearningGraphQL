@@ -108,7 +108,6 @@ body {
 }
 
 .nav {
-  position: fixed;
   background-image: linear-gradient(to right, #E7017A, #DF4A1F);
   width: 100%;
   z-index: 2;
@@ -142,6 +141,7 @@ body {
   align-items: center;
   color: #e2e8f0;
   line-height: 1.5;
+  margin-top: -50px;
 }
 .header h1 {
   margin-bottom: 4vh;
@@ -243,35 +243,54 @@ body {
   text-shadow: 0 0 3px 3px #E7017A;
 }
 
-.section {
-  color: #fff;
-}
-
 .viewList {
   position: fixed;
   top: 50%;
   right: 60px;
   transform: translateY(-50%);
   list-style: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 .viewList li {
-  margin-bottom: 10px;
+  border-radius: 2px;
 }
 .viewList li a {
   display: block;
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 2rem;
   z-index: 2;
   transition: 0.35s;
+  padding: 15px 20px;
 }
-.viewList a.active {
-  color: #E7017A;
+.viewList li:hover {
+  box-shadow: 0 0 20px 1px rgba(223, 74, 31, 0.4);
+}
+.viewList li:hover a {
+  color: #DF4A1F;
+}
+.viewList li.active {
+  box-shadow: 0 0 20px 1px rgba(231, 1, 122, 0.4);
+}
+.viewList li.active a {
+  color: rgba(231, 1, 122, 0.8);
 }
 
 @media screen and (max-width: 768px) {
   .viewList {
     display: none;
   }
+}
+.section {
+  padding: 50px 0;
+}
+.section .section-title {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-align: center;
 }

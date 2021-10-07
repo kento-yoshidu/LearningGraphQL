@@ -43,10 +43,6 @@ body {
 	}
 }
 
-.view {
-	height: 100vh;
-}
-
 .header {
 	position: relative;
 	display: flex;
@@ -56,6 +52,7 @@ body {
 	color: rgb(226, 232, 240);
 	line-height: 1.5;
 	margin-top: -50px;
+	height: 100vh;
 	h1 {
 		margin-bottom: 4vh;
 		color: rgb(226, 232, 240);
@@ -349,6 +346,116 @@ body {
 		}
 		&:hover .content {
 			padding: 40px 60px;
+		}
+	}
+}
+
+.view3 {
+	.wrapper {
+		width: 60%;
+		margin: 50px auto;
+		.content {
+			display: flex;
+			color: #fff;
+			width: 80%;
+			margin-bottom: 30px;
+			padding: 12px 8px;
+			transition: .3s;
+			text-decoration: none;
+			&:hover {
+				background-color: rgba(#fff, 0.01);
+				color: rgba($main-color, 0.8);
+			}
+			.page-number {
+				position: relative;
+				margin-right: 50px;
+				width: 55px;
+				height: 55px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: -4px;
+					left: -4px;
+					right: -4px;
+					bottom: -4px;
+					transform: skewX(2deg) skewY(4deg);
+					border-radius: 2px;
+				}
+				&::after {
+					filter: blur(15px);
+				}
+				span {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background-color: $bg-gradient;
+					z-index: 1;
+				}
+				h4 {
+					position: relative;
+					font-size: 1.2rem;
+					z-index: 3;
+				}
+			} //page-number
+			.setumei {
+				h3 {
+					margin-bottom: 20px;
+					font-size: 1.8rem;
+				}
+				p {
+					font-size: 1.1rem;
+					line-height: 1.5;
+				}
+			}
+			.page-1 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #4A569D, $bg-gradient, #DC2424);
+				}
+			}
+			.page-2 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, orange, $bg-gradient, #009FFF);
+				}
+			}
+			.page-3 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #00f260, $bg-gradient, #ffd200);
+				}
+			}
+			.page-4 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #b91d73, $bg-gradient, #f953c6);
+				}
+			}
+			.page-5 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #ffd200, $bg-gradient, #FC466B);
+				}
+			}
+			.page-6 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #00c3ff, $bg-gradient, #ffff1c);
+				}
+			}
+			.page-7 {
+				&::before,
+				&::after {
+					background: linear-gradient(315deg, #66ff00, $bg-gradient, #a80077);
+				}
+			}
 		}
 	}
 }

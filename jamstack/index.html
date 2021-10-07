@@ -14,9 +14,9 @@
 	<nav class="nav">
 		<ul>
 			<li><a href="#">HOME</a></li>
-		<li><a href="#">What's Jamstack?</a></li>
-		<li><a href="#">Sample Site</a></li>
-		<li><a href="#">Blog Article</a></li>
+			<li><a href="#">Architecture</a></li>
+			<li><a href="#">Sample Site</a></li>
+			<li><a href="#">Blog Article</a></li>
 	</ul>
 </nav>
 
@@ -36,40 +36,53 @@
 
 <ol id="viewList" class="viewList">
 	<li data-li="view1"><a href="#view1"><ion-icon name="home-outline"></ion-icon></a></li>
-	<li data-li="view2"><a href="#view2"><ion-icon name="help-circle-outline"></ion-icon></a></li>
-	<li data-li="view3"><a href="#view3"><ion-icon name="arrow-redo-outline"></ion-icon></a></li>
+	<li data-li="view2"><a href="#view2"><ion-icon name="settings-outline"></ion-icon></a></li>
+	<li data-li="view3"><a href="#view3"><ion-icon name="globe-outline"></ion-icon></a></li>
 	<li data-li="view4"><a href="#view4"><ion-icon name="document-text-outline"></ion-icon></a></li>
 </ol>
 
 	<section class="section view" id="view2">
 
-		<h2 class="section-title">
-			What's Jamstack?
-		</h2>
+		<h2 class="section-title">Architecture</h2>
 
 		<div class="container">
 			<div class="box">
 				<span></span>
 				<div class="content">
 					<h3>SSG</h3>
-					<p>ReactやVue.jsなどのフレームワークの機能を使い、HTMLやCSSなどの静的ファイルを書き出します。</p>
+					<p>NextJSやNuxt.js、Gatsbyなどのフレームワークの機能を使い、HTMLやCSSなどの静的ファイルを書き出します。</p>
 				</div>
 			</div>
 			<div class="box">
 				<span></span>
 				<div class="content">
 					<h3>Headless CMS</h3>
-					<p>jgpiajrpajg@jaw@jgwa@jgparjpja@o</p>
+					<p>動的なデータはHeadless CMSサービスを使って管理します。データベースを持つ必要はありません。</p>
 				</div>
 			</div>
 			<div class="box">
 				<span></span>
 				<div class="content">
-					<h3>title</h3>
-					<p>jgpiajrpajg@jaw@jgwa@jgparjpja@o</p>
+					<h3>CDN</h3>
+					<p>静的ファイルはCDNサービスを使って配信します。バックエンドを持たないJamstackならではのメリットです。</p>
 				</div>
 			</div>
 		</div>
+
+		<table class="arch-table">
+			<tr>
+				<th>SSG</th>
+				<td>NextJS　Gatsby　Nuxt.js　Gridsome　SvelteKit</td>
+			</tr>
+			<tr>
+				<th>Headless<br>CMS</th>
+				<td>microCMS　Contentful　graphCMS</td>
+			</tr>
+			<tr>
+				<th>CDN</th>
+				<td>AWS Amplify　Netlify　Vercel　Gatsby Cloud</td>
+			</tr>
+		</table>
 	</section>
 
 	<section class="section view view3" id="view3">
@@ -99,7 +112,7 @@
 				</div>
 				<div class="setumei">
 					<h3>CSS Animation & Tips</h3>
-					<p>Nuxt.jsを使って、CSSのアニメーションやTipsを解説するサイトを作成しました。<br>Nuxt.jsを使って、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
+					<p>Nuxt.jsを使って、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
 				</div>
 			</a>
 
@@ -132,7 +145,7 @@
 				</div>
 				<div class="setumei">
 					<h3>NextJS-microCMS-CafeSite</h3>
-					<p>NextJSとmicroCMSを組み合わせたサイトを作成しました。</p>
+					<p>NextJSとmicroCMSを組み合わせたサイトを作成しました。Storybookを導入しています。</p>
 				</div>
 			</div>
 

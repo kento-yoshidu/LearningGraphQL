@@ -484,16 +484,19 @@ body {
       }
 		}
 		.arch-table {
-			margin: 30px auto;
-			width: 90%;
+			margin: 30px auto 0;
+			width: 95%;
       tr {
-        padding: 12px 15px;
-        th,
+        padding: 12px;
+        th {
+					font-size: 0.9rem;
+				}
         td {
-          font-size: 1.1rem;
+          font-size: 0.7rem;
         }
         th {
-          width: 150px;
+          max-width: 130px;
+					border: 1px solid red;
           &::before {
             height: 18px;
             width: 18px;
@@ -613,4 +616,33 @@ body {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: 768px) {
+	.view3 {
+		.wrapper {
+			width: 90%;
+			margin: 30px auto;
+			.content {
+				width: 100%;
+				flex-direction: column;
+				.page-number {
+					margin-right: 0;
+					margin-bottom: 20px;
+					width: 50px;
+					height: 50px;
+				}
+				.setumei {
+					width: 95%;
+					h3 {
+						font-size: 1.3rem;
+						margin-bottom: 10px;
+					}
+					p {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}	
 }

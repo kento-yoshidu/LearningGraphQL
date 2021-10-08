@@ -544,18 +544,21 @@ body {
     width: 100%;
   }
   .view2 .arch-table {
-    margin: 30px auto;
-    width: 90%;
+    margin: 30px auto 0;
+    width: 95%;
   }
   .view2 .arch-table tr {
-    padding: 12px 15px;
-  }
-  .view2 .arch-table tr th,
-.view2 .arch-table tr td {
-    font-size: 1.1rem;
+    padding: 12px;
   }
   .view2 .arch-table tr th {
-    width: 150px;
+    font-size: 0.9rem;
+  }
+  .view2 .arch-table tr td {
+    font-size: 0.7rem;
+  }
+  .view2 .arch-table tr th {
+    max-width: 130px;
+    border: 1px solid red;
   }
   .view2 .arch-table tr th::before {
     height: 18px;
@@ -645,4 +648,31 @@ body {
 }
 .view3 .wrapper .content .page-7::before, .view3 .wrapper .content .page-7::after {
   background: linear-gradient(315deg, #66ff00, rgba(14, 24, 42, 0.99), #a80077);
+}
+
+@media screen and (max-width: 768px) {
+  .view3 .wrapper {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .view3 .wrapper .content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .view3 .wrapper .content .page-number {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .view3 .wrapper .content .setumei {
+    width: 95%;
+  }
+  .view3 .wrapper .content .setumei h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .view3 .wrapper .content .setumei p {
+    font-size: 0.9rem;
+  }
 }

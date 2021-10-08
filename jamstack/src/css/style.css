@@ -118,8 +118,11 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 .nav ul li {
+  display: inline-block;
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -129,6 +132,17 @@ body {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  .nav ul {
+    justify-content: start;
+    width: 90%;
+  }
+  .nav ul li {
+    margin-right: 20px;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+}
 .view {
   min-height: 100vh;
 }
@@ -210,6 +224,9 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .header {
+    margin-top: 30px;
+  }
   .header h1 {
     width: 80%;
     font-size: 1.3rem;
@@ -295,15 +312,21 @@ body {
   letter-spacing: 3px;
   text-align: center;
 }
-.section .container {
+
+@media screen and (max-width: 768px) {
+  .section .section-title {
+    font-size: 2.5rem;
+  }
+}
+.view2 .container {
   margin: 100px auto 50px;
   width: 85%;
   display: flex;
   justify-content: space-around;
 }
-.section .box {
+.view2 .box {
   position: relative;
-  width: 270px;
+  width: 240px;
   height: 350px;
   display: flex;
   justify-content: center;
@@ -311,36 +334,34 @@ body {
   margin: 0 auto;
   transition: 0.5s;
 }
-.section .box::before, .section .box::after {
+.view2 .box::before, .view2 .box::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 50px;
   width: 50%;
   height: 100%;
   border-radius: 8px;
   transition: 0.5s;
 }
-.section .box::after {
+.view2 .box::after {
   filter: blur(30px);
 }
-.section .box:nth-child(1):before, .section .box:nth-child(1)::after {
+.view2 .box:nth-child(1):before, .view2 .box:nth-child(1)::after {
   background-image: linear-gradient(315deg, #ffbc00, #ff0058);
   transform: skewX(15deg);
 }
-.section .box:nth-child(2):before, .section .box:nth-child(2):after {
+.view2 .box:nth-child(2):before, .view2 .box:nth-child(2):after {
   background-image: linear-gradient(315deg, #0575E6, #00F260);
 }
-.section .box:nth-child(3):before, .section .box:nth-child(3)::after {
+.view2 .box:nth-child(3):before, .view2 .box:nth-child(3)::after {
   background: linear-gradient(45deg, #db36a4, #f7ff00);
   transform: skewX(-15deg);
 }
-.section .box:hover::before, .section .box:hover::after {
+.view2 .box:hover::before, .view2 .box:hover::after {
   transform: skewX(0deg);
-  left: 20px;
   width: calc(100% - 90px);
 }
-.section .box span {
+.view2 .box span {
   display: block;
   position: absolute;
   top: 0;
@@ -350,11 +371,13 @@ body {
   z-index: 2;
   pointer-events: none;
 }
-.section .box span::before, .section .box span::after {
+.view2 .box span::before, .view2 .box span::after {
   content: "";
   position: absolute;
+  /*
   width: 100%;
   height: 100%;
+      */
   border-radius: 8px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -363,40 +386,39 @@ body {
   opacity: 0;
   transition-delay: 0.3s;
 }
-.section .box:hover span::before, .section .box:hover span::after {
+.view2 .box:hover span::before, .view2 .box:hover span::after {
   width: 100px;
   height: 100px;
   opacity: 1;
 }
-.section .box:nth-child(1) span::before {
+.view2 .box:nth-child(1) span::before {
   animation: span-anime1 2s ease-in-out infinite;
   top: -50px;
-  left: -20px;
 }
-.section .box:nth-child(1) span::after {
+.view2 .box:nth-child(1) span::after {
   animation: span-anime2 2s ease-in-out infinite;
   bottom: -50px;
-  right: 20px;
+  right: 0;
 }
-.section .box:nth-child(2) span::before {
-  animation: span-anime2 2s ease-in-out infinite;
-  top: -50px;
-  right: 25px;
-}
-.section .box:nth-child(2) span::after {
-  animation: span-anime1 2.2s ease-in-out infinite;
-  bottom: -50px;
-  left: -25px;
-}
-.section .box:nth-child(3) span::before {
+.view2 .box:nth-child(2) span::before {
   animation: span-anime2 2s ease-in-out infinite;
   top: -50px;
-  right: 25px;
+  right: 0;
 }
-.section .box:nth-child(3) span::after {
-  animation: span-anime2 2s ease-in-out alternate-reverse infinite;
+.view2 .box:nth-child(2) span::after {
+  animation: span-anime1 2s ease-in-out infinite;
   bottom: -50px;
-  left: -25px;
+  left: 0;
+}
+.view2 .box:nth-child(3) span::before {
+  animation: span-anime2 2s ease-in-out infinite;
+  top: -50px;
+  right: 0;
+}
+.view2 .box:nth-child(3) span::after {
+  animation: span-anime3 2s ease-in-out infinite;
+  bottom: -50px;
+  left: 0;
 }
 @keyframes span-anime1 {
   0%, 100% {
@@ -408,16 +430,24 @@ body {
 }
 @keyframes span-anime2 {
   0%, 100% {
-    transform: translatX(10px);
+    transform: translateX(10px);
   }
   50% {
     transform: translateX(-10px);
   }
 }
-.section .box .content {
+@keyframes span-anime3 {
+  0%, 100% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+.view2 .box .content {
   position: absolute;
   width: 100%;
-  padding: 15px 40px;
+  padding: 30px 40px;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -427,37 +457,40 @@ body {
   transition: 0.5s;
   color: #fff;
 }
-.section .box .content h3 {
-  font-size: 2rem;
+.view2 .box .content h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
-.section .box .content p {
+.view2 .box .content p {
   font-size: 1rem;
   line-height: 1.7;
 }
-.section .box:hover .content {
+.view2 .box:hover .content {
   padding: 18px 45px;
   width: 110%;
 }
-.section .arch-table {
+.view2 .arch-table {
   width: 60%;
-  margin: 100px auto;
+  margin: 100px auto 0;
   color: #fff;
 }
-.section .arch-table tr {
-  display: block;
+.view2 .arch-table tr {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 12px 20px;
 }
-.section .arch-table tr th,
-.section .arch-table tr td {
+.view2 .arch-table tr th,
+.view2 .arch-table tr td {
   font-size: 1.5rem;
+  line-height: 1.3;
 }
-.section .arch-table tr th {
+.view2 .arch-table tr th {
   position: relative;
   width: 190px;
 }
-.section .arch-table tr th::before {
+.view2 .arch-table tr th::before {
   content: "";
   position: absolute;
   height: 25px;
@@ -467,39 +500,67 @@ body {
   transform: translateY(-50%);
   border-radius: 10px;
 }
-.section .arch-table tr:nth-child(1) th::before {
-  background-image: linear-gradient(315deg, #ffbc00, #ff0058);
+.view2 .arch-table tr:nth-child(1) th::before {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
-.section .arch-table tr:nth-child(2) th::before {
+.view2 .arch-table tr:nth-child(2) th::before {
   background: linear-gradient(315deg, #0575E6, #00F260);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.section .arch-table tr:nth-child(3) th::before {
+.view2 .arch-table tr:nth-child(3) th::before {
   background: linear-gradient(45deg, #db36a4, #f7ff00);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media screen and (max-width: 768px) {
-  .section .section-title {
-    font-size: 3rem;
-  }
-  .section .container {
+  .view2 .container {
     flex-direction: column;
-    margin: 50px auto;
+    margin: 80px auto 30px;
   }
-  .section .box {
-    height: 300px;
+  .view2 .box {
+    height: 250px;
     margin-bottom: 50px;
   }
-  .section .box:nth-child(1):before, .section .box:nth-child(1)::after {
+  .view2 .box:nth-child(1):before, .view2 .box:nth-child(1)::after {
     transform: skewX(0);
   }
-  .section .box:nth-child(3):before, .section .box:nth-child(3)::after {
+  .view2 .box:nth-child(3):before, .view2 .box:nth-child(3)::after {
     transform: skewX(0);
   }
-  .section .arch-table {
-    margin: 50px auto;
+  .view2 .box:hover span::before, .view2 .box:hover span::after {
+    width: 75px;
+    height: 75px;
+  }
+  .view2 .box .content {
+    width: 80%;
+    padding: 20px 25px;
+  }
+  .view2 .box .content h3 {
+    font-size: 1.2rem;
+  }
+  .view2 .box .content p {
+    font-size: 0.9rem;
+  }
+  .view2 .box:hover .content {
+    padding: 18px 30px;
+    width: 100%;
+  }
+  .view2 .arch-table {
+    margin: 30px auto;
     width: 90%;
+  }
+  .view2 .arch-table tr {
+    padding: 12px 15px;
+  }
+  .view2 .arch-table tr th,
+.view2 .arch-table tr td {
+    font-size: 1.1rem;
+  }
+  .view2 .arch-table tr th {
+    width: 150px;
+  }
+  .view2 .arch-table tr th::before {
+    height: 18px;
+    width: 18px;
+    border-radius: 5px;
   }
 }
 .view3 .wrapper {

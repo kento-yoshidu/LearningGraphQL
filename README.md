@@ -1,5 +1,3 @@
-# Old_PortfolioSite
+https://www.youtube.com/watch?v=HOuZyOKa91o
 
-旧ポートフォリオ跡地
-
-現ポートフォリオリポジトリ→
+https://oohito.com/nqthm/archives/3310
